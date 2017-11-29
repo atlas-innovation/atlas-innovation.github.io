@@ -40,6 +40,29 @@ p {
 	}
 }
 
+.nomes {
+	font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+@media (max-width: 575px) {
+	.nomes {
+		font-size: 30px;
+		line-height: 1.6;
+		margin: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.nomes {
+		font-size: 30px;
+		line-height: 1.6;
+		margin: 0;
+	}
+}
+
 a {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -200,6 +223,13 @@ a:focus, a:hover {
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;top: 50%;
+}
+
+.quemsomos-section {
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .download-section {
