@@ -190,8 +190,22 @@ a:focus, a:hover {
 	padding-bottom: 150px;
 }
 
+.oquefazemos-section {
+	width: 100%;
+	height: 100%;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.text-container {
+	text-align: center;
+}
 .download-section {
 	background: url("../img/downloads-bg.jpg") no-repeat center center scroll;
+	width: 100%;
+	height: 100%;
+	padding-top: 150px;
+	padding-bottom: 150px;
 	color: white;
 	background-color: black;
 	-webkit-background-size: cover;
@@ -202,6 +216,10 @@ a:focus, a:hover {
 
 .servico-section {
 	background: url("../img/servico-bg.jpg") no-repeat center center scroll;
+	width: 100%;
+	height: 100%;
+	padding-top: 150px;
+	padding-bottom: 150px;
 	color: black;
 	background-color: black;
 	-webkit-background-size: cover;
@@ -212,12 +230,25 @@ a:focus, a:hover {
 
 .mercado-section {
 	background: url("../img/quemsomos-bg.jpg") no-repeat center center scroll;
+	width: 100%;
+	height: 100%;
+	padding-top: 150px;
+	padding-bottom: 150px;
 	color: black;
 	background-color: black;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+.contactos-section{
+	padding-top: 150px;
+	padding-bottom: 150px;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	text-align: center;
 }
 
 #map {
