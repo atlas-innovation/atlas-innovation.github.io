@@ -190,7 +190,7 @@ a:focus, a:hover {
 	padding-bottom: 150px;
 }
 
-.oquefazemos-section {
+.container-align {
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -234,8 +234,6 @@ a:focus, a:hover {
 	background: url("../img/quemsomos-bg.jpg") no-repeat center center scroll;
 	width: 100%;
 	height: 100%;
-	padding-top: 150px;
-	padding-bottom: 150px;
 	color: black;
 	background-color: black;
 	-webkit-background-size: cover;
