@@ -284,12 +284,12 @@ a:focus, a:hover {
 }
 
 .servico-section {
-	background: url("../img/servico-bg.jpg") no-repeat center center scroll;
+	background: url("../img/servico-bg.jpeg") no-repeat center center scroll;
 	width: 100%;
 	height: 100%;
 	padding-top: 150px;
 	padding-bottom: 150px;
-	color: black;
+	color: white;
 	background-color: black;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -298,7 +298,7 @@ a:focus, a:hover {
 }
 
 .mercado-section {
-	background: url("../img/quemsomos-bg.jpg") no-repeat center center scroll;
+	background: url("../img/quemsomos-bg.jpeg") no-repeat center center scroll;
 	width: 100%;
 	height: 100%;
 	color: black;
