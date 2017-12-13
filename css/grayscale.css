@@ -246,8 +246,12 @@ a:focus, a:hover {
 	left: 50%; top: 50%;
 }
 
-.servico-text{
-	text-shadow: 2px 2px 5px black;
+.black-shadow-text{
+	text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.white-shadow-text{
+	text-shadow: 2px 2px 5px white;
 }
 
 .mercado-text-container {
