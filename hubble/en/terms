@@ -1,0 +1,1158 @@
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+          href="/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"
+          href="/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"
+          href="/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="Happn"/>
+    <meta name="msapplication-TileColor" content="#0D8DB8"/>
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png"/>
+
+    <meta name="viewport" content="width=480, initial-scale=0.6 user-scalable='no'">
+
+    
+        <link href="/css/new.css?v=2" media="screen" rel="stylesheet" type="text/css" >
+<link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" >        <title>happn</title>                        
+    <script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/sdk.js?v=2"></script>
+<script type="text/javascript" src="/js/happn.js?v=2"></script>
+<script type="text/javascript" src="/js/cookie.js?v=2"></script>    <script type="application/javascript">
+        $(document).ready(function () {
+            WH.init({
+                domain: ".happn.fr",
+                appId: "7f9592eb2b14da37e8bc7c7a6c1490f4",
+                status: true,
+                cookie: true
+            });
+        });
+    </script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	 (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9959023750977957",
+			   enable_page_level_ads: true
+			    });
+	</script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MSVSNM"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MSVSNM');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+    var port = location.port;
+    if (port.length > 0) {
+        port = ':' + port;
+    }
+    var loginUrl = location.protocol + '//' + location.hostname + port + "/en/login";
+    var synchronizeUrl = location.protocol + '//' + location.hostname + port + "/front/account/synchronize";
+    var shareHref = location.protocol + '//' + location.hostname + port + "/en/new-year";
+
+    $(document).ready(function () {
+        Website.init({
+            'appId': 247294518656661,
+            'loginUrl': loginUrl,
+            'synchronizeUrl': synchronizeUrl,
+            'fbLoginUrl': '',
+            'nyShareHref': shareHref,
+            'nyShareText': 'In 2015, make it happn ! May this year be full of surprises, chances and opportunities.',
+            'youtubeUrl': 'ZH6ZnofSJS0'
+        });
+            });
+</script>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+    if (location.hash == "#app-concept") {
+        dataLayer.push({
+            'event': 'VirtualPageview',
+            'virtualPageURL': location.pathname + location.search + location.hash,
+            'virtualPageTitle': 'tutorial'
+        });
+    } else {
+        dataLayer.push({
+            'event': 'VirtualPageview',
+            'virtualPageURL': location.pathname + location.search + location.hash,
+            'virtualPageTitle': "terms"
+        });
+    }
+</script>
+<div class="loader">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<div style="overflow: hidden">
+    <nav>
+        <ul>
+            <li>
+                <ul>
+                    <li><a class="text-menu"
+                           href="/en/#intro">Download</a>
+                    </li>
+                    <li><a class="text-menu mobile"
+                           href="/en/#app-concept">Tutorial</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/about">About us</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/faq">FAQ</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/privacy">Privacy Policy</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/trust">Confidence Charter</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/terms">Terms of Service</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/job">Jobs</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/contact">Contact</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <form>
+                    <label for="select-language">language</label>
+                    <select id="select-language">
+                        <option
+                            value="fr" >French</option>
+                        <option
+                            value="en"  selected >English</option>
+                        <option
+                            value="de" >Deutsch</option>
+                        <option
+                            value="es" >Spanish</option>
+                        <option
+                            value="ja" >Japanese</option>
+                    </select>
+                </form>
+            </li>
+            <li>
+                <ul class="menu-nav-download">
+                    <li><a class="button-appstore"
+                           href="https://app.adjust.com/q9bvl0?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.appstore.click'});" target="_blank"></a></li>
+                    <li><a class="button-googleplay"
+                           href="https://app.adjust.com/ysas9p?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.android.click'});" target="_blank"></a></li>
+                    <li><a class="button-wpstore"
+                           href="https://app.adjust.com/iaejry?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.windows.click'});" target="_blank"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="top-bar">
+            <a href="/en/#intro" class="logo-btn">
+                <img height="36px" src="/images/logo-happn-mini-laptop.svg"
+                     class="desktop-view"/>
+                <img height="44px" src="/images/logo-happn-mini-laptop.svg"
+                     class="mobile-view"/>
+            </a>
+                                                    <div class="account-box" style="display: none">
+                        <a href="/en/account">
+                            <img src=""/>
+                            <span class="name"></span>
+                        </a>
+                        <a href="/auth/logout" class="logout">Se&nbsp;déconnecter</a>
+                    </div>
+
+                                <a class="menu-btn desktop-view" href="#"><img height="24px" src="/images/icon-menu.svg"></a>
+            <a class="menu-btn mobile-view" href="#"><img height="28px" src="/images/icon-menu.svg"></a>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div id="content">
+            <div class="head-content-faq" style="text-align: center;background-image:url('/images/bg-cgu.png');background-position: top;background-size:cover;">
+    <div class="table" style="width: 100%;height: inherit;">
+        <div class="table-cell resizable-container" style="height: inherit;vertical-align: middle;">
+            <h1 class="title-big-white">Terms of Service</h1>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="grid">
+        
+  <style type="text/css">
+    p.p1 {margin: 0; font-size: 12px; }
+    p.p2 {margin: 0; font-size: 12px; ; min-height: 14px}
+    p.p3 {margin: 0; font-size: 12px}
+    p.p4 {margin: 0; font-size: 12px; ; min-height: 17px}
+    p.p5 {margin: 0; font-size: 12px; }
+    li.li1 {margin: 0; font-size: 12px; }
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {font-size: 12px; font-kerning: none}
+    span.s4 {text-decoration:underline}   
+    span.s6 {font-kerning: none; color: #ff2500; -webkit-text-stroke: 0px #ff2500}
+    span.s7 {font-size: 12px}
+    span.s8 {font-size: 12px; font-kerning: none}
+    span.s9 {font-size: 12px; text-decoration: underline ; font-kerning: none; color: #0433ff; -webkit-text-stroke: 0px #0433ff}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+  
+<div class="point">
+<p>Updated on 31 August 2017</p> 
+<h2>Definitions</h2>
+
+<p class="p1"><span class="s1"><b>Account</b>: The Account is the Member's dedicated personal area within the Application, which he or she accesses when he or she registers with and connects to the Application. It enables the Member to access the Services.</span></p>
+
+<p class="p1"><span class="s1"><b>Application</b>: The HAPPN application, available on the Apple App Store, the Google Play Store and the Microsoft Windows Phone Store.</span></p>
+
+<p class="p1"><span class="s1"><b>Chat request</b>: Is an action suggested before and/or after sending a Like. Chat request refers to the functionality “Say Hi” in the Application and is a non-confidential function that triggers a notification to the Member you want to “Say Hi” to and constitute an invitation to chat with this Member.</span></p>
+
+<p class="p1"><span class="s1"><b>Credit</b>: Credits are the units used within the Application. For Members, Credits are what allow them to send a Chat request to another Member.</span></p>
+
+<p class="p1"><span class="s1"><b>Crush</b>: A Crush is created between two profiles and triggered by a Like on both profiles. It represents a mutual interest which sends out a “You have a Crush” notification, allowing the Members to start a conversation.</span></p>
+
+<p class="p1"><span class="s1"><b>Facebook Connect</b>: Feature enabling Members to use their Facebook account to log in to the Application, in order to simplify the registration process.</span></p>
+
+<p class="p1"><span class="s1"><b>Female Members</b>: Members described as female in their personal information.</span></p>
+
+<p class="p1"><span class="s1"><b>HAPPN</b>: HAPPN, a French joint stock company (Société par Actions Simplifiée) with paid-in capital of €36 486,44 registered with the Paris RCS (trade and companies registry) as 535 217 723, and owner and sole operator of the HAPPN application and trademark.</span></p>
+
+<p class="p1"><span class="s1"><b>Like</b>: Action represented by a heart to express interest. This function is confidential and no notification is sent unless the Like is reciprocated.</span></p>
+
+<p class="p1"><span class="s1"><b>Male Members</b>: Members described as male in their personal information.</span></p>
+
+<p class="p1"><span class="s1"><b>Member</b>: Person registered with the Application.</span></p>
+
+<p class="p1"><span class="s1"><b>Messages and vocal messages</b>: Only Members who have a Crush can use the Application's “Chat” function to send each other Messages. Messages are stored in the inbox, which is accessible via the icon on the top right of the homepage.</span></p>
+
+<p class="p1"><span class="s1"><b>Packs</b>: Packs are Credit bundles which can be purchased by Members.</span></p>
+
+<p class="p1"><span class="s1"><b>Pass</b>: Action represented by a cross to express a lack of interest. This function is confidential and no notification is sent. “Passed” profiles will not appear on the Member's timeline in the future, unless he or she decides to cancel the Pass, which is free of charge and easily done under “Preferences”.</span></p>
+
+<p class="p1"><span class="s1"><b>Services</b>: All services (both charged and free-of-charge) offered by HAPPN to encourage virtual or real-life meet-ups between Members who have crossed paths and who have a mutual interest in one another according to the selected search criteria.</span></p>
+
+<p class="p1"><span class="s1"><b>TCOU</b>: These Terms and Conditions of Use.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 1: Scope</h2>
+
+<p class="p1"><span class="s1">The TCOU define the rights and obligations of the parties when using the Application. They form the basis of the contractual relationship between the Member and the company HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1"><b>1.1 Conflicting Rules</b></span></p>
+
+<p class="p1"><span class="s1">These Terms and Conditions of Use (TCOU) determine the main rules of use for the Application. They are accompanied by additional policies – our Privacy Policy, our Confidence Charter and the Frequently-Asked Questions (FAQ) – which provide the Member with clearer guidance on how to use the Application. In the event of a conflict between the various policies making the rules inaccessible, unintelligible or unpredictable, these TCOU shall prevail over the Privacy Policy, the Confidence Charter and the FAQ.</span></p>
+
+
+<p class="p1"><span class="s1"><b>1.2 Independence of Provisions</b></span></p>
+
+<p class="p1"><span class="s1">Should any provision of these TCOU be declared invalid or inapplicable due to the effects of a law, regulation or ruling by a court with relevant jurisdiction, the other provisions shall remain effective and in force, unless these TCOU become distorted, or the obligations of the parties significantly thrown out of balance.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 2: Amendments to the TCOU</h2>
+
+
+<p class="p1"><span class="s1"><b>2.1 Updates</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN reserves the right, unilaterally and at any time, to end, add to or amend these TCOU as it sees fit or to terminate the Service.</span></p>
+
+
+<p class="p1"><span class="s1">The Member will be informed of the updates on the Application and/or by e-mail to the address given by the Member. It is the Member’s responsibility to see that this e-mail address is valid.</span></p>
+
+
+<p class="p1"><span class="s1">It is the Member’s responsibility to carefully read the updated TCOU and to be fully aware of any changes ensuing from said updates.</span></p>
+
+
+<p class="p1"><span class="s1">Complete acceptance of the changes is implied by the Member’s continued use of the Application’s Services following the updates.</span></p>
+
+
+<p class="p1"><span class="s1">Should the Member not agree with changes made to the TCOU, he or she has the option to end the Services and terminate the contractual relationship as per Article 16.3.</span></p>
+
+
+<p class="p1"><span class="s1"><b>2.2 Immediate Effect</b></span></p>
+
+<p class="p1"><span class="s1">The new TCOU shall be effective immediately for all Members.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 3: Governing Law – Dispute resolution</h2>
+
+
+<p class="p1"><span class="s1"><b>3.1 Governing Law</b></span></p>
+
+<p class="p1"><span class="s1">These TCOU shall be governed by French law.</span></p>
+
+
+<p class="p1"><span class="s1"><b>3.2 Dispute resolution</b></span></p>
+
+<p class="p1"><span class="s1">The Member will contact HAPPN first in order to try and find an amicable settlement to any dispute with HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1">In case of failure, the Member is informed that he/she may choose to have recourse to mediation, free of charge, and submit its dispute to the Online Dispute Resolution platform proposed by the European Commission, which may be accessed at the following address: <a href="http://ec.europa.eu/consumers/odr/"><span class='s4'>http://ec.europa.eu/consumers/odr/</span></a>. </span></p>
+
+
+<p class="p1"><span class="s1">Before initiating such a mediation procedure, the Member must have submitted the dispute to HAPPN in writing in order to try and find an amicable settlement.</span></p>
+
+
+<p class="p1"><span class="s1">Any challenge or dispute related to the formation, interpretation, performance or expiry of these TCOU or in any connection therewith which has not been amicably settled shall be submitted to the appropriate courts of Paris.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 4: Registration</h2>
+
+
+<p class="p1"><span class="s1"><b>4.1 Download Options</b></span></p>
+
+<p class="p1"><span class="s1">The Application is available on the Apple, Google and Microsoft official download platforms. It can be downloaded free-of-charge from the Apple App Store, the Google Play Store and the Microsoft Windows Phone Store, on iPhones running version iOS 8 or higher, Android Smartphones running version 4.1 or higher, and Windows Phones running version 8.1 or higher.</span></p>
+
+
+<p class="p1"><span class="s1"><b>4.2 Member's Rights when Registering</b></span></p>
+
+<p class="p1"><span class="s1">Provided that the required conditions for Member status are met, HAPPN shall assign the Member a personal Account, which includes:</span></p>
+
+<p class="p1"><span class="s1">• A profile page</span></p>
+
+<p class="p1"><span class="s1">• An inbox</span></p>
+
+<p class="p1"><span class="s1">• A “notifications” option</span></p>
+
+
+<p class="p1"><span class="s1"><b>4.3 Conditions of Membership when Registering</b></span></p>
+
+<p class="p1"><span class="s1">The Member must be over the age of 18, and must guarantee that all information that he or she provides when registering is true and up-to-date.</span></p>
+
+<p class="p1"><span class="s1">The Member is registered via Facebook Connect, which enables HAPPN to use the Member's profile photo, first name, age calculated based on the date of birth and interests in order to create a “profile” page. The Member should therefore check the accuracy of his or her Facebook information before registering with the Service.</span></p>
+
+<p class="p1"><span class="s1">Upon registration, the Member accepts these TCOU and the Privacy Policy and agrees to fulfill his or her obligations, and particularly those set out in the Member Code of Conduct under Article 9 of these TCOU.</span></p>
+
+<p class="p2"><span class="s1"><b></b></span><br></p>
+
+</div>
+<div class="point"><h2>Article 5: Services and Features</h2>
+
+
+<p class="p1"><span class="s1"><b>5.1 Purpose of the Service</b></span></p>
+
+<p class="p1"><span class="s1">The Application provides HAPPN Members with a user-friendly setting which enables contact with other Members in the same area or Members with whom they have crossed paths in the past, in order to set up virtual or real-life meetings for personal and recreational purposes. Each Member is free to talk to and form relationships with other Members in compliance with these TCOU.</span></p>
+
+
+<p class="p1"><span class="s1">The Services offered by HAPPN may in no case be likened to a counseling or marriage bureau service. Its sole aim is to facilitate virtual or real-life meet-ups through the Application between couples with a mutual interest, according to the Members’ locations and preferences.</span></p>
+
+
+<p class="p1"><span class="s1"><b>5.2 Services for Members</b></span></p>
+
+<p class="p1"><span class="s1">Some of HAPPN's services are available on the Application free of charge (apart from connection and telecommunications costs) for Members who agree to comply with these TCOU, including:</span></p>
+
+<p class="p1"><span class="s1">• Unlimited sending of confidential Likes</span></p>
+
+<p class="p1"><span class="s1">• Unlimited sending of Messages and voice messages when one has a Crush</span></p>
+
+<p class="p1"><span class="s1">• Unlimited and confidential viewing of other Members' profiles</span></p>
+
+<p class="p1"><span class="s1">• Passing an unlimited number of Members</span></p>
+
+<p class="p1"><span class="s1">• Confidentially blocking all Members whose conduct justifies such an action</span></p>
+
+<p class="p1"><span class="s1">• Confidentially reporting all Members whose conduct is contrary to the TCOU or applicable law</span></p>
+
+<p class="p1"><span class="s1">• Viewing the list of Members previously passed or blocked</span></p>
+
+<p class="p1"><span class="s1">• Retrieving Members previously passed or blocked</span></p>
+
+<p class="p1"><span class="s1">• Accessing the list of Members with whom he or she has crossed paths during the use of the Services</span></p>
+
+<p class="p1"><span class="s1">• Using the integrated music streaming platform</span></p>
+
+<p class="p1"><span class="s1">• Configuring his or her search criteria</span></p>
+
+<p class="p1"><span class="s1">• Receiving notifications</span></p>
+
+<p class="p1"><span class="s1">• Inviting friends</span></p>
+
+<p class="p1"><span class="s1">• Consulting the FAQ and tutorials</span></p>
+
+<p class="p1"><span class="s1">• Finding out how many Chat requests he or she has received and how many Crushes he or she has without these figures being visible to other Members</span></p>
+
+<p class="p1"><span class="s1">• Completing his or her profile in compliance with the TCOU</span></p>
+
+<p class="p1"><span class="s1">• Deleting Messages and voice messages.</span></p>
+
+<p class="p1"><span class="s1">Charged services provided via the Application are available to Members by purchasing a Pack, the conditions of which are set out in Article 10.1. One Credit enables Members to send a Chat request to another Member.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 6: Personal Data Protection</h2>
+
+
+<p class="p1"><span class="s1"><b>6.1 Identity of the data controller – Recipients of the data</b></span></p>
+
+<p class="p1"><span class="s1">The data are collected by:</span></p>
+
+<p class="p1"><span class="s1">SAS HAPPN, a French company with paid-in capital of €36 486,44 registered as 535 217 723 in the Paris RCS, with its registered office at 8 rue du Sentier 75002 Paris and<span class="Apple-tab-span">	</span> represented by its Chairman, Didier Rappaport.</span></p>
+
+
+<p class="p1"><span class="s1">Only certain customer service employees and authorized managers of HAPPN can process the personal data of the Members for the purpose described in Article 6.2. These employees and managers only have access to the data necessary to the performance of their duties.</span></p>
+
+
+<p class="p1"><span class="s1">HAPPN may also contract with authenticated, reliable subcontractors that may access, host and/or process some of the Member’s personal data on behalf of HAPPN under its instructions, in compliance with the Privacy Policy and guaranteeing the security and confidentiality of the Member’s personal data. These subcontractors primarily enable HAPPN to establish statistics on the traffic volume and/or the using of the Application and/or ensuring the smooth operation of the Service.</span></p>
+
+
+<p class="p1"><span class="s1">The Member’s personal data identified as “publicly available on HAPPN” under Article 6.3 visible on his profile are only available to the Members with whom he or she had crossed paths and who match his or her search criteria.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.2 Purpose of the data processed by HAPPN</b></span></p>
+
+<p class="p1"><span class="s1">The data collected by HAPPN are necessary to the normal operations and improvement of the Services offered to Members.</span></p>
+
+
+<p class="p1"><span class="s1">The processed data also allow HAPPN to carry out statistical studies relating to the use of the Application and its Services by the Members. It allows HAPPN to send promotional messages from advertisers and other partners via the Application. However, HAPPN never transfers any personal data of its Members to such advertisers and partners.</span></p>
+
+
+<p class="p1"><span class="s1">HAPPN may access, store and share Member’s personal data with authorized third parties in response to a legal demand (warrant, court order or other) or to comply with a legal, regulatory or judicial obligation, or to prevent or detect fraudulent activities or attacks on the security of the Service, pursuant to and in accordance with applicable law.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.3 Fair collection of personal data – type of data</b></span></p>
+
+<p class="p1"><span class="s1"><b>Data related to the Member’s identity</b>: The registration form must be completed in order to access the Services, and HAPPN collects the data from Facebook, via Facebook Connect, to simplify the process. Members are required to provide some personal data when registering:</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>Photos: the Member must at least provide their public Facebook profile picture. The Member then has the option of removing and/or adding other photos to his or her Account from his or her Facebook account or smartphone. For the sake of transparency, the published photos must represent the Member and should not mislead the other Members about his or her identity and/or physical appearance. These photos may not represent a famous person or include the image of a minor, and may not represent a racist, shocking, illegal or sexual message or contain personal information. The photos are published in the Application under the sole responsibility of the Member. By becoming a Member, the latter agrees to the publication of his or her photos on the Application.</span></p>
+
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her date of birth (only the age calculated from the date of birth is visible on HAPPN)</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her sex (publicly visible on HAPPN)</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her first name (publicly visible on HAPPN)</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her interests (publicly visible on HAPPN)</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her surname (not visible to the public on HAPPN)</span></p>
+
+<p class="p1"><span class="s1">•<span class="Apple-converted-space">  </span>His or her e-mail address (not visible to the public on HAPPN). The Member agrees to check that the email address taken off Facebook Connect is valid and/or to change it to facilitate communications with HAPPN.</span><span class="s2"></span></p>
+
+
+<p class="p1"><span class="s1">Any other personal information the Member enters in his or her Account is optional and entered at the Member’s sole discretion (directly or via Facebook Connect) and under his or her sole responsibility.</span></p>
+
+
+<p class="p1"><span class="s1">Thus, a Member may authorize access to his or her list of Facebook friends so that when another Member views his or her profile, Member can see any mutual friends they may have.</span></p>
+
+
+<p class="p1"><span class="s1">The Member may also provide HAPPN with a mobile phone number in order to receive text alerts. In all cases, the Member's e-mail address, surname and phone number shall not be visible or available to the public.</span></p>
+
+<p class="p1"><span class="s1">Facebook does not send any further data to HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1"><b>Location Data (geolocation)</b>: HAPPN’s primary function and goal is to enable Members to find the people they’ve crossed paths with, in order to facilitate virtual or real life meet ups. The Member will be asked for permission to collect and process his or her geolocation in order to allow HAPPN to identify the crossing points with other Members who agreed to geolocation. The HAPPN news feed is created by these crossing points, displaying to the Member only profiles that he or she crossed paths with and that fit his or her criteria.</span></p>
+
+<p class="p1"><span class="s1">HAPPN may, with express consent, access the Member's position, approximately or more precisely depending on which technology is being used. HAPPN does not track the movements and/or itinerary of its Members, and the Member is reminded that HAPPN only keeps the crossing points between the Members.</span><span class="s2"> </span><span class="s1">The exact position or the itinerary of the Member is never available to the other Members.</span></p>
+
+
+<p class="p1"><span class="s1">The Member is free</span><span class="s2"> </span><span class="s1">to withdraw his or her consent at any time, and deactivate the geolocation technology on his smartphone. By doing so, the Member is preventing his or her news feed from being updated, and the Member will not see the other Members he or she has crossed paths with after the deactivation of the geolocation technology.</span></p>
+
+
+<p class="p1"><span class="s1"><b>Transaction Data</b>: HAPPN does not collect or process any bank data. The Apple App Store, Google Play Store and the Windows Phone Store have opted to refrain from sending certain data to mobile applications, which includes any banking and financial information. Such data is collected and processed solely by the above platforms, and HAPPN does not have the option of changing this payment method.</span></p>
+
+
+<p class="p1"><span class="s1"><b>Messaging Data</b>: Messaging data are sent and stored on HAPPN's servers solely in order to provide the service enabling conversations between Members who got a Crush. Messages and vocal messages are strictly private and involve only the Members in question.</span></p>
+
+<p class="p1"><span class="s1">HAPPN’s authorized managers are not entitled to read these conversations, except in case of judicial request and/or according to applicable provisions of law or regulations and/or<span class="Apple-converted-space">  </span>as a piece of evidence given to HAPPN by a Member as part of a report.</span></p>
+
+<p class="p1"><span class="s1">Moreover, these strictly private Messages shall not be accessible to other Members who have not participated in such Messages, or to unregistered internet users or third parties.</span></p>
+
+
+<p class="p1"><span class="s1"><b>Data related to research preferences</b>: By default the Application is set to research Members of the opposite gender (man &gt; woman - woman &gt; man) who are 18 to 70+ years old. The Member can modify and fill in the age range and gender of the people they are looking for (man and/or woman) in order to see only the profiles they have crossed paths with that fit their criteria. The Member will therefore only see on his or her newsfeed the Members with whom he crossed paths that fit his or her search criteria.</span></p>
+
+
+<p class="p1"><span class="s1"><b>Mobile Data</b>: When the Member uses the Application, HAPPN collects server logs which may include information such as IP addresses, operating systems or application crashes. HAPPN cannot access its Members' browsing history.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.4 Further information concerning the data collected</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN ensures that the personal data the Member has published on the Application is entirely invisible to non-registered Internet users and third parties. HAPPN cannot be held liable for data published on its platform and disclosed by a Member.</span></p>
+
+
+<p class="p1"><span class="s1">The Member's profile will not appear on the Application to Members with whom he or she has crossed paths but who are not compatible with his or her preferences.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.5 Sensitive Data</b></span></p>
+
+<p class="p1"><span class="s1">Certain data is legally classified as “sensitive” pursuant to Article 8 of the French Act n° 78-17 of January 6, 1978, known as the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+
+<p class="p1"><span class="s1">When registering on the Application, the Member may decide to provide sensitive data about himself or herself under his or her description such as, for example, ethnic origin, sexual orientation or political views.</span></p>
+
+<p class="p1"><span class="s1">HAPPN does not encourage Member to disclose sensitive data to other Members or to HAPPN. Nevertheless, if the Member is willing to disclose such data in his or her profile, the disclosure is taken to be an express consent to the collection and processing of these data by HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.6 Member’s Rights</b></span></p>
+
+<p class="p1"><span class="s1">In accordance with the Loi Informatique et Libertés (French Data Protection Act), each Member has the right to access, correct and contest his or her personal data. HAPPN is attentive to its Members’ concerns, and therefore undertakes to comply with personal data protection rules and deal with requests of this kind as soon as possible. Subject to proof of identity, Members may exercise their rights by sending a letter or an e-mail to the address shown in Article 17 of these TCOU.</span></p>
+
+<p class="p1"><span class="s1">• The right to access allows the Member to ask HAPPN for data pertaining to him or her in an accessible format, based on Article 39 of the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+<p class="p1"><span class="s1">• The right to correct grants the Member the right to demand the correction, the addition, the update or the deletion of any personal data pertaining to him or her which is inaccurate, incomplete, ambiguous, out-of-date, or whose use, communication or storage is prohibited based on Article 40 of the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+<p class="p1"><span class="s1">• The right to contest grants the Member the free-of-charge and discretionary right to contest the use of its data by HAPPN for the purpose of commercial prospection, based on Article 38 of the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+<p class="p1"><span class="s1">• The right to cancel grants the Member the right to demand the deletion free of charge of the data transmitted to HAPPN within the limit, however, of the legal obligations imposed on HAPPN as a hosting provider.</span></p>
+
+<p class="p1"><span class="s1">• The right for the Member to set his or her guidelines for the retention, deletion and communication of his or her personal data after his or her death, based on Article 40-1 of the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+
+<p class="p1"><span class="s1">These rights may only be exercised within the limits of HAPPN’s resources as regards its linking with Facebook Connect. Some of the data are sent to HAPPN by Facebook Connect and cannot be corrected without Facebook's assistance.</span></p>
+
+<p class="p1"><span class="s1">The Member can at his or her initiative rectify most of his or her personal data on the Application.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.7 Lack of cession of your personal data</b></span></p>
+
+<p class="p1"><span class="s1">Personal data, whether visible or not to the other Members, are not licensed nor given by HAPPN to third parties.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.8 Storage of personal Data</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN will store the Member's personal data for as long as required in order for the Member to use his or her Account.</span></p>
+
+<p class="p1"><span class="s1">Furthermore, please note that in accordance with its status as a hosting provider, HAPPN has a legal obligation to retain some of Members' personal data for a period of one year based on Article 6, II of the Loi pour la Confiance dans l’Economie Numérique of June 21, 2004 (French Trust in the Digital Economy Act).</span></p>
+
+<p class="p1"><span class="s1">Pursuant to the Decree of February 25, 2011 pertaining to the retention and communication of data, the retention period applied to HAPPN is calculated from the moment the content is created for data referred to by 1° and 2° of Article 6, II of the French Trust in the Digital Economy Act, i.e.:</span></p>
+
+<p class="p1"><span class="s1">• The username used to log in which is at the source of the communication;</span></p>
+
+<p class="p1"><span class="s1">• The identifier assigned to the content by the information system;</span></p>
+
+<p class="p1"><span class="s1">• The protocol types used;</span></p>
+
+<p class="p1"><span class="s1">• The operation type;</span></p>
+
+<p class="p1"><span class="s1">• The operation dates and times;</span></p>
+
+<p class="p1"><span class="s1">• The username used by the originator of the operation if provided by the latter.</span></p>
+
+<p class="p1"><span class="s1">The retention period applied to HAPPN is calculated from the moment the agreement is cancelled or the Account is deleted for the data referred to by 3° of the same Article, i.e.:</span></p>
+
+<p class="p1"><span class="s1">• First names and surnames</span></p>
+
+<p class="p1"><span class="s1">• Any aliases used</span></p>
+
+<p class="p1"><span class="s1">• Linked e-mail addresses or Accounts</span></p>
+
+<p class="p1"><span class="s1">• Phone numbers</span></p>
+
+<p class="p1"><span class="s1">• The password and data used to verify or amend the Account (most recent version).</span></p>
+
+<p class="p1"><span class="s1">HAPPN agrees to make every effort and to invest all means at its disposal in order to guarantee that the stored data are as secure as possible. It is however the Member's responsibility to take appropriate action in order to protect his or her data outside of HAPPN’s scope.</span></p>
+
+<p class="p1"><span class="s1">HAPPN does not collect data from minors. Should a Member lie about his or her date of birth, and particularly if he or she fraudulently claims to be over 18 years of age, the parents of the minor in question may inform HAPPN of this by sending a letter to the address shown in Article 17 in order to request that the data be deleted. HAPPN agrees to delete all data concerning the minor in question as soon as possible.</span></p>
+
+
+<p class="p1"><span class="s1"><b>6.9 Transfer of Data outside the EU</b></span></p>
+
+<p class="p1"><span class="s1">When registering, the Member expressly consents to his or her data being transmitted to subcontractors, and hosted on servers owned by our service providers outside the European Union, for the proper provision of the service, for the purpose of performing statistical studies and for the purpose of providing customer care support to Members.</span></p>
+
+<p class="p1"><span class="s1">HAPPN guarantees that the transfers are made under conditions ensuring the confidentiality and security of the data and providing for an adequate level of protection with respect to the Article 68 and 69 of the Loi Informatique et Libertés (French Data Protection Act).</span></p>
+
+
+</div>
+<div class="point"><h2>Article 7: CNIL Declaration</h2>
+
+
+<p class="p1"><span class="s1"><b>7.1 CNIL</b> <b>Declaration</b></span></p>
+
+<p class="p1"><span class="s1">The collection of Members’ personal data has been officially declared to the CNIL (French Commission on Data Protection).</span></p>
+
+
+</div>
+<div class="point"><h2>Article 8: HAPPN's Obligations and Liability</h2>
+
+
+<p class="p1"><span class="s1"><b>8.1 Technical Resources and Security</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN agrees to provide the infrastructure and technical resources to provide a high-quality Service to Members with an iPhone device running operating system version IOS 8 or higher, an Android Smartphone running version 4.1 or higher, or a Windows Phone running version 8.1 or higher.</span></p>
+
+<p class="p1"><span class="s1">HAPPN cannot be held liable for any operating fault on the Member's device or for any compatibility issue between the Application and the device.</span></p>
+
+<p class="p1"><span class="s1">Every effort is made to ensure that the risks of fraudulent access to HAPPN's system are minimized. HAPPN therefore uses a firewall or equipment located between the internet and the Company's private network, in order to make its security more robust by filtering traffic to and from the internet. It is, however, impossible to fully guarantee the security of a network.</span></p>
+
+<p class="p1"><span class="s1">HAPPN is not responsible for any failures, interruptions or poor performance of the Member's internet provider services, or for any cause beyond HAPPN's control which might interrupt or have an adverse effect on access to HAPPN Services.</span></p>
+
+<p class="p1"><span class="s1">The Member must have access to a secure e-mail account. If such a precaution is not taken, or even if it is, the Member's Account may, in some rare cases, be targeted by fraudsters.</span></p>
+
+<p class="p1"><span class="s1">HAPPN shall also endeavor to avert any exceptional risk to Members of receiving spam Messages or Messages claiming to have been sent by HAPPN. The Member must ensure that he or she reports any of the above circumstances to HAPPN by sending a letter or e-mail to the address provided in Article 17 hereof.</span></p>
+
+
+<p class="p1"><span class="s1"><b>8.2 Illegal Conduct</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN and its partners cannot be held liable for actions by its Members which are illegal or which incur criminal penalties, including but not limited to:</span></p>
+
+<p class="p1"><span class="s1">• All types of scams</span></p>
+
+<p class="p1"><span class="s1">• Prostitution</span></p>
+
+<p class="p1"><span class="s1">• Identity theft</span></p>
+
+<p class="p1"><span class="s1">• An infringement of a third party intellectual property right.</span></p>
+
+
+<p class="p1"><span class="s1"><b>8.3 Reporting and Community Moderation System</b></span></p>
+
+<p class="p1"><span class="s1">As a hosting provider and pursuant to Article 6, I, 7° of the French Trust in the Digital Economy Act, HAPPN has no legal obligation to monitor the content sent or stored via the Application.</span></p>
+
+
+<p class="p1"><span class="s1">However, according to Article 6-I-3° of the French Trust in the Digital Economy Act, HAPPN must set up a reporting and community moderation system in order to report some illegal, abusive and prejudicial content.</span></p>
+
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
+
+<p class="p1"><span class="s1">In such case and after due verification by customer service, HAPPN commits to promptly remove the said content.</span></p>
+
+
+<p class="p1"><span class="s1">Pursuant to Article 6-I-5 of the French Trust in the Digital Economy Act: The knowledge of illicit content is deemed effective when the hosting provider is notified of following:</span></p>
+
+<p class="p1"><span class="s1">• The notification date</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The content transmitter’s identity</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The description of the facts in contention (possibly with screen shots of the conversation)</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The reasons of the reporting</span></p>
+
+
+<p class="p1"><span class="s1">HAPPN has therefore set up a reporting and community moderation system allowing Members to report the content described in Article 6-I-7° of the French Trust in the Digital Economy Act if it constitutes apology for crimes against humanity, apology for and incitement to terrorism, incitement to racial hatred, incitement to hatred based on gender, sexual orientation or handicap and inter alia child pornography, incitement to violence against women and violation of human dignity.</span></p>
+
+
+<p class="p1"><span class="s1">Guided by an extremely strict professional ethic and refusing any association with violent or insulting Members as well as illegal, abusive or prejudicial content, HAPPN’s team takes this reporting procedure very seriously.</span></p>
+
+
+<p class="p1"><span class="s1">Hence, when the content published by a Member is reported, the transmitter’s account can be removed or suspended according to the conditions set forth in Article 16.4. This decision is based on the proof given by the report’s author and is made in order to ensure the withdrawal of any illegal content in compliance with HAPPN’s legal obligations.</span></p>
+
+
+<p class="p1"><span class="s1">The Member having originally published the reported content will be informed of such a decision on the Application and/or by e-mail at the address given. He or she will in no case be informed of the identity of the report’s author.</span></p>
+
+
+<p class="p1"><span class="s1">Outside the scope of this reporting system, the Member can decide to block another Member in order to prevent any conversation with him or her (mutual prevention of access to Like, Chat request, Messages and voice messages that have been sent and of sending any messages in the future, or being alerted of the presence of a Member who has been blocked, particularly if they think this Member is bothering them in one way or another). It is possible, however, to unblock the Member free of charge in order to be in touch with him or her again. This action is confidential and enables Members to control the Members with whom they want to keep in touch or not.</span></p>
+
+
+<p class="p1"><span class="s1">This reporting system is available and operational:</span></p>
+
+<p class="p1"><span class="s1">• On an iPhone: at the bottom right of the Member's profile photo, and at the top right of the conversation with the Member in question;</span></p>
+
+<p class="p1"><span class="s1">• On a Smartphone: at the bottom right of the Member's profile photo, and at the top right of the conversation with the Member in question;</span></p>
+
+<p class="p1"><span class="s1">• On a Windows phone: at the bottom right of the Member's profile photo, and at the bottom right of the conversation with the Member in question.</span></p>
+
+
+<p class="p1"><span class="s1">Should content be published that was reported and that may be seen as a violation of law or regulations, the Member who is a victim of this content is encouraged to submit a complaint to the appropriate police authorities.</span></p>
+
+
+<p class="p1"><span class="s1">The reporting system put in place by HAPPN does not replace any complaint and judicial procedure against a Member who authored the reported content.</span></p>
+
+
+<p class="p1"><span class="s1">Any misuse of the community moderation system or any unjustified reporting of a Member shall be considered a breach of these TCOU, and penalties may be imposed including Account suspension (Pursuant to Article 16.4 of the TCOU), Account cancellation or even legal proceedings (Pursuant to Article 6-I-4° of the French Trust in the Digital Economy Act) under which damages may have to be paid to victims.</span></p>
+
+
+<p class="p1"><span class="s1"><b>8.4 Duty of Caution</b></span></p>
+
+<p class="p1"><span class="s1">The Member is solely liable for checking the identity of the people with whom he or she wishes to arrange a “real-life” meet-up. HAPPN may not be held liable for any problems whatsoever arising from a “real-life” meet-up.</span></p>
+
+
+<p class="p1"><span class="s1"><b>8.5 Group Events</b></span></p>
+
+<p class="p1"><span class="s1">Any use of HAPPN Services to organize a group meeting of its Members constitutes a misuse of the Service. Using the Application to plan or organize a demonstration on a public roadway is strictly prohibited. Should such a meeting take place, HAPPN may not be held liable in the case of a public order offense or any damage caused by such meeting.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 9: Member Code of Conduct</h2>
+
+
+<p class="p1"><span class="s1"><b>9.1 Duty of </b></span><span class="s3"><b>Fairness</b></span><span class="s1"><b> and Honesty when Registering</b></span></p>
+
+<p class="p1"><span class="s1">In order to become a Member, all of the following conditions must be met:</span></p>
+
+<p class="p1"><span class="s1">• Must be an adult as specified by French law (minimum of 18 years old on last birthday) ;</span></p>
+
+<p class="p1"><span class="s1">• Must have honestly and truthfully filled out the Facebook profile information. The Member must have provided the first name, sex and date of birth shown in his or her personal information. Failing that, the Member agrees to correct any errors on his or her Facebook profile, and to activate syncing of information between his or her Facebook profile and his or her Account ;</span></p>
+
+<p class="p1"><span class="s1">• Must have read these TCOU and have accepted them when confirming his or her registration.</span></p>
+
+<p class="p1"><span class="s1">• Must agree to regularly update the information provided when accessing his or her Account from the Application.</span></p>
+
+<p class="p1"><span class="s1">HAPPN does not have a legal obligation or the technical resources to verify the identity and age of Members. However, in the event of any doubt or cause for suspicion, or following the use of the “report” feature by a third party pointing to an identity theft or fictitious or incorrect information, HAPPN shall conduct an investigation as quickly as possible and may correct the information provided where necessary without misrepresenting the Member's profile.</span></p>
+
+<p class="p1"><span class="s1">For the duration of the investigation, HAPPN reserves the right to suspend the Account of any Member giving cause for suspicion as well as his or her access to the Application, and to conduct the necessary checks, in particular by asking him or her to send an official identity document. The Member will be informed of the suspension of his account via the application or by e-mail to the address given by the Member pursuant to Article 16.4.</span></p>
+
+<p class="p1"><span class="s1">Should the Member be unable to provide said proof, or in the case of a proven offence under these TCOU, HAPPN may cancel the Service for the Member in question in accordance with the conditions set out by Article 16.4 hereof.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.2 Duty of </b></span><span class="s3"><b>Fairness</b></span><span class="s1"><b> and Honesty during Use</b></span></p>
+
+<p class="p1"><span class="s1">In order to remain a Member, all of the following conditions must be met:</span></p>
+
+<p class="p1"><span class="s1">• Be honest and truthful in his or her statements.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from posting any photos of third parties online, or any confidential information about others such as financial data.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from posting any content or photos on the Application which are pornographic or which violate modesty and human dignity.</span></p>
+
+<p class="p1"><span class="s1">• Respect the private nature of content and conversations exchanged with other Members through the Application, and therefore refrain from disclosing the content of such Messages.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from violating intellectual property laws.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from disrupting public order.</span></p>
+
+<p class="p1"><span class="s1">•  Refrain from committing defamation, and more generally from using insulting language, particularly of a racial or discriminatory nature.</span></p>
+
+<p class="p1"><span class="s1">• Comply with current laws and regulations.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from inciting violence or advocating terrorism, war crimes or crimes against humanity.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from infringing upon accepted social standards and standards of politeness with other Members.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from infringing upon the normal running of the Application’s Services or infrastructure in any way.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from using robots or tools other than those provided by HAPPN when using the Application to contact other Members.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from using the Application to arrange escort services.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from approaching other Members with the aim of promoting paid services or products.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from disclosing his or her login information to other Members, particularly the username and password used to access his or her Account.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from advertising or encouraging in any way the use of any other service, whether or not this is a competing service, and refrain from committing any offence relating to unfair competition.</span></p>
+
+<p class="p1"><span class="s1">• Refrain from using the Application to organize gatherings or demonstrations.</span></p>
+
+
+<p class="p1"><span class="s1">The Member shall not copy and/or disseminate, and/or transfer technical data that it might intercept on the network connected to the HAPPN application.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.3 Personal Use</b></span></p>
+
+<p class="p1"><span class="s1">The Member agrees to use HAPPN solely for personal use. The HAPPN network must not be exploited for commercial, promotional, electoral or recruitment purposes. It is strictly prohibited to send Messages of a marketing and/or commercial nature and/or newsletters via the HAPPN inbox, including but not limited to content, guidelines or hyperlinks to third party sites or materials, particularly those of HAPPN's competitors.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.4 Member's Liability</b></span></p>
+
+<p class="p1"><span class="s1">The Member is only liable for his or her own actions and for the data that he or she publishes via the Application.</span></p>
+
+<p class="p1"><span class="s1">Should HAPPN be held liable for any failure by the Member to comply with its obligations, the Member shall hold HAPPN harmless against any conviction made against it regarding the Member's infringement of the law or of these TCOU.</span></p>
+
+<p class="p1"><span class="s1">HAPPN does not moderate the content published by Members and shared through the Application. In particular, HAPPN's </span><span class="s3">staff</span><span class="s1"> shall not check any photos, text or content to which hyperlinks published by Members are pointing. The Member may report unlawful content which violates French law or these TCOU using the moderation tools provided by the Application in accordance with Article 8.3.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.5 Photos</b></span></p>
+
+<p class="p1"><span class="s1">All photos of a pornographic or exhibitionist nature, which violate modesty and are generally offensive to public moral values are strictly prohibited. The publication of such photos will be considered a serious offence and can lead to the suspension and/or closure of the Member’s Account, in addition to any other penalties that may be imposed by the courts.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.6 Real-life Meet-ups</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN advises Members who wish to arrange “real-life” meet-ups to be vigilant. Members are solely responsible for verifying the identity of those with whom they meet. “Real-life” meet-ups are arranged independently of HAPPN and are the sole responsibility of Members. HAPPN cannot be held liable for any acts or problems of any type which have been committed or caused by Members and/or former Members when such events occur after use of the Application. In this respect, one of the intended benefits of the HAPPN messaging service, again to ensure that Members remain safe and free from harassment, is to enable Members to decide which people should be allowed to see their profiles and talk to them.</span></p>
+
+<p class="p1"><span class="s1">As regards the people with whom the Member has agreed to exchange Messages, it is recommended that Members do not too readily reveal information which is not included in the profile such as a phone number, address or surname. For safety reasons, HAPPN strongly advises, that real-life meetings be arranged only in busy public places or that a friend or relative be informed of the meeting and that Members disclose their contact information only after a reasonable period of time.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.7 Account Management</b></span></p>
+
+<p class="p1"><span class="s1">The Member must regularly consult his or her inbox and notifications, which HAPPN will use inter alia to keep the Member updated on information pertaining to its Services. This information may also be sent to the Member's e-mail address which is obtained through Facebook Connect.</span></p>
+
+
+<p class="p1"><span class="s1">The Member may access his or her Account Services by connecting to the Application using a confidential username and password. The Member is solely responsible for his or her login information and any use of this information by a third party. The Member shall specifically hold HAPPN harmless against any communication, use or declaration made using his or her Account.</span></p>
+
+
+<p class="p1"><span class="s1"><b>9.8 Equipment</b></span></p>
+
+<p class="p1"><span class="s1">The cost of equipment (hardware or software) required to access the Services together with all other costs related thereto, including telecommunications costs, shall be borne solely by the Member. The Member is solely responsible for the hardware used to access the Service.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 10: Payment Terms</h2>
+
+
+<p class="p1"><span class="s1"><b>10.1 Pricing</b></span></p>
+
+<p class="p1"><span class="s1">Credits cannot be purchased individually. They are available in Packs of multiple Credits, at prices available in the Apple App Store, the Google Play Store and the Windows Phone Store.</span></p>
+
+<p class="p1"><span class="s1">Members receive a free Pack of 10 Credits when registering with the Application.</span></p>
+
+
+<p class="p1"><span class="s1"><b>10.2 Secure Payment</b></span></p>
+
+<p class="p1"><span class="s1">Packs can be paid for securely in accordance with the payment terms of the Apple App Store, Google Play Store or Microsoft Windows Phone Store. The Apple App Store, Google Play Store and Microsoft Windows Phone Store alone are liable for their payment terms and processes, which are beyond HAPPN's control in accordance with the terms and conditions set out by the above platforms. Any refunds or payment-related requests must be sent to Apple, Google or Microsoft according to the device used to make the purchase.</span></p>
+
+<p class="p1"><span class="s1">Bank details are collected by Apple, Android and Microsoft and are beyond HAPPN's control.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 11: Services Provided</h2>
+
+
+<p class="p1"><span class="s1"><b>11.1 Credit Validity Period</b></span></p>
+
+<p class="p1"><span class="s1">Credits purchased or offered by HAPPN may only be used for the term during which the Account remains active, in compliance with the TCOU. However, in the event of early termination of the Account pursuant to Article 16.3, 16.4 or 16.5 hereafter, any remaining Credit at the date of termination shall be permanently deleted from the Account, without compensation of any kind. </span></p>
+
+<p class="p1"><span class="s1">A subsequent re-registration of the Member will not allow him or her to recover the lost Credits.</span></p>
+
+
+<p class="p1"><span class="s1">Specific case of Credits offered: HAPPN may offer Credits to Members as part of its loyalty program or for a special event.</span></p>
+
+
+<p class="p1"><span class="s1"><b>11.2 Cumulative Services</b></span></p>
+
+<p class="p1"><span class="s1">Credit Packs are cumulative. The number of Credits in each Pack purchased is added to the remaining Credits in the Member's Account.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 12: Communication with the Member</h2>
+
+
+<p class="p1"><span class="s1"><b>12.1 Push</b> <b>Notifications</b></span></p>
+
+<p class="p1"><span class="s1">The Member may receive push notifications through the Application to notify him or her of important events, including but not limited to:</span></p>
+
+<p class="p1"><span class="s1">• A Chat request received from another Member</span></p>
+
+<p class="p1"><span class="s1">• A Message or vocal message received from another Member  </span></p>
+
+<p class="p1"><span class="s1">• A Message from HAPPN relating to the Member’s Account and/or Services</span></p>
+
+
+<p class="p1"><span class="s1">The Member may change his or her push notification preferences through his or her Account.</span></p>
+
+
+<p class="p1"><span class="s1"><b>12.2 Newsletter</b></span></p>
+
+<p class="p1"><span class="s1">When the Member registers with the Application, he or she agrees to receive newsletters from HAPPN. He or she may unsubscribe at any time by clicking on the “unsubscribe” link provided in the newsletter and/or by exercising his or her right to cancel by sending an e-mail to the address provided in Article 17.</span></p>
+
+
+<p class="p1"><span class="s1"><b>12.3 Advertising and promotional messages</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN is free to post, through the Application, advertising and promotional messages from advertisers and any other partner. The Member expressly consents to receive such messages.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 13: Sponsoring</h2>
+
+
+<p class="p1"><span class="s1"><b>13.1 Inviting Friends</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN allows its Members to invite friends to join the Application in order to widen the network and increase their chances of meeting someone. Members who sponsor a new user receive 5 free Credits. Members should only sponsor those in their immediate circle (friends and relatives) whom they know in real life. Consequently, group recommendations outside this circle are strictly prohibited.</span></p>
+
+
+<p class="p1"><span class="s1"><b>13.2 Benefits</b></span></p>
+
+<p class="p1"><span class="s1">HAPPN reiterates that the benefits obtained from this optional feature are simple benefits solely for use as part of the Application. HAPPN in no case promises Members entitlement to any direct financial gain as a reward.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 14: Intellectual and Industrial Property</h2>
+
+
+<p class="p1"><span class="s1"><b>14.1</b> <b>Prerogatives related to Trademark Law</b></span></p>
+
+<p class="p1"><span class="s1">The HAPPN trademark is exclusively owned by HAPPN (SAS or Simplified Joint Stock Company registered with the Paris Trade and Companies Registry under the number 535 217 723), and HAPPN holds all of the related rights. The trademark has been registered with the French National Institute for Industrial Property (Institut National de Propriété Industrielle) under the number 4109777, the Office for Harmonization in the Internal Market under number 012787974, and the World Intellectual Property Organization.</span></p>
+
+<p class="p1"><span class="s1">Any reproduction and/or use and/or partial and/or total affixing and/or modification and/or deletion of the trademark and related rights, such as for example (without limitation) the Application's slogan and logo, through any method whatsoever and in any form whatsoever, in any format or through any medium whatsoever, is strictly prohibited without HAPPN's prior, express and written authorization, and legal proceedings may be brought.</span></p>
+
+<p class="p1"><span class="s1">The trademark is protected by Articles L713-2 et seq. of the French Intellectual Property Code (Code de la propriété intellectuelle) currently in force in France, and this protection is international.</span></p>
+
+
+<p class="p1"><span class="s1"><b>14.2</b> <b>Prerogatives related to Copyright</b></span></p>
+
+<p class="p1"><span class="s1">The original works provided by HAPPN are exclusively owned by HAPPN (SAS or Simplified Joint Stock Company registered with the Paris Trade and Companies Registry under the number 535 217 723). HAPPN holds all of the related rights.</span></p>
+
+<p class="p1"><span class="s1">Any representation and/or reproduction and/or distribution and/or partial and/or total exploitation of the content and Services provided by the Application, such as for example the software, animations, text, videos, graphics and more broadly the general structure, through any method whatsoever and in any form whatsoever, in any format or through any medium whatsoever, is strictly prohibited without HAPPN's prior, express and written authorization, and legal proceedings may be brought.</span></p>
+
+<p class="p1"><span class="s1">These original works are protected by Articles L335-3 et seq. of the French Intellectual Property Code (Code de la propriété intellectuelle) currently in force in France, and this protection is international.</span></p>
+
+
+<p class="p1"><span class="s1"><b>14.3 License</b></span></p>
+
+<p class="p1"><span class="s1">The usage rights granted by HAPPN to the Member are restricted to private and personal use. Any other use by the Member is prohibited without HAPPN's authorization.  </span></p>
+
+
+<p class="p1"><span class="s1">The Member grants HAPPN and its partners a free-of-charge, non-exclusive, international and permanent license for the use, reproduction, representation, modification and translation of any basic intellectual property-related component (text, photos, videos etc.) that it may provide through the Application for the non-exclusive purpose of communicating with other Members. HAPPN shall use this license in a manner which complies with image rights and which protects the user's personal data, without misrepresenting the true nature of the Member's profile and therefore in keeping with this profile. This license permits HAPPN to ensure that these components are compatible with its technical performance or the required media formats. Rights are granted on an international basis and throughout the performance of these TCOU between the Member and HAPPN.</span></p>
+
+<p class="p1"><span class="s1">The Member shall retain ownership of any content and personal data that he or she provides.</span></p>
+
+<p class="p1"><span class="s1">The Member shall hold HAPPN harmless against any legal action, appeal or conviction brought against him or her due to his or her infringement of a third party's intellectual property rights. The Member shall hold HAPPN harmless against any resulting claims or damages.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 15: Unfair Competition</h2>
+
+<p class="p1"><span class="s1">The following acts are strictly prohibited: the design of a product similar to the Application or the creation of a derivative, and more generally being guilty of parasitism, imitation, a smear campaign or any other act of unfair competition. HAPPN reserves the right, in this case, to serve a writ on the Member in question.</span></p>
+
+<p class="p1"><span class="s1">Any Member who succeeds in or attempts to grant licenses or sub-licenses, or to sell, resell, transfer, assign, distribute or commercially exploit in any other way, or to make available the Services or Application to a third party in any way shall risk serious legal penalties.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 16: Termination</h2>
+
+
+<p class="p1"><span class="s1"><b>16.1 Deactivation of the Account by the Member</b></span></p>
+
+<p class="p1"><span class="s1">The Member may deactivate his or her Account without notice through the Application if he or she no longer wishes to be visible on it.</span></p>
+
+<p class="p1"><span class="s1">Once the profile has been deactivated:</span></p>
+
+<p class="p1"><span class="s1">• The Member’s profile will be made invisible to other Members in the past, present and future.</span></p>
+
+<p class="p1"><span class="s1">• There will be no change to the legal data retention obligation.</span></p>
+
+<p class="p1"><span class="s1">• In the event of an Account being reactivated during the one-year period following the closure of the Account, the details kept will be reallocated to the profile, which will be visible again.</span></p>
+
+
+<p class="p1"><span class="s1"><b>16.2 Uninstallation of the Application by the Member</b></span></p>
+
+<p class="p1"><span class="s1">The Member may uninstall the Application from his or her mobile at any time without notice. In that case, the Member shall have no further access to the Application unless he or she downloads it again.</span></p>
+
+<p class="p1"><span class="s1">Once the Application has been uninstalled:</span></p>
+
+<p class="p1"><span class="s1">• The Member’s profile will be made invisible to other Members in the past, present and future;</span></p>
+
+<p class="p1"><span class="s1">• There will be no change to the legal data retention obligation;</span></p>
+
+<p class="p1"><span class="s1">• In the event of an Account being reactivated during the one-year period following the closure of the Account, the details kept will be reallocated to the profile, which will be visible again.</span></p>
+
+<p class="p1"><span class="s1">However, Members are advised to log out of the Application before uninstalling it. By default, the Member's profile shall remain accessible for 24 hours following the uninstallation.</span></p>
+
+
+<p class="p1"><span class="s1"><b>16.3 Deletion of the Account by the Member</b></span></p>
+
+<p class="p1"><span class="s1">The Member may decide, at any time and without notice, to permanently delete his or her Account by sending a letter or e-mail to HAPPN, whose postal address and e-mail address are shown in Article 17 hereof. In that case the Member's profile will be permanently deleted, including the remaining Credits on his or her Account.</span></p>
+
+
+<p class="p1"><span class="s1">Should the Member wish to start using the Application again, he or she must register under the same conditions as the original registration.</span></p>
+
+<p class="p1"><span class="s1">Once the Account has been deleted:</span></p>
+
+<p class="p1"><span class="s1">• The Member’s profile will be made invisible to other Members;</span></p>
+
+<p class="p1"><span class="s1">• The Member's data shall be retained for one year as of this date, as regards in particular the legal obligations incumbent upon HAPPN in accordance with the terms set out by Article 6.6 hereof, and shall be permanently deleted thereafter;</span></p>
+
+<p class="p1"><span class="s1">• The Member cannot reactivate his or her old Account;</span></p>
+
+<p class="p1"><span class="s1">• The remaining Credits on the Member’s Account on the day the Account is deleted, shall be definitively lost without any possibility to claim any reimbursement.</span></p>
+
+
+<p class="p1"><span class="s1">The Member will not be able to reactivate his/her previous Account.</span></p>
+
+
+<p class="p1"><span class="s1"><b>16.4 Termination/ Suspension of the Account by HAPPN</b> <b>in case of breach of TCOU</b></span></p>
+
+<p class="p1"><span class="s1">In case of breach of TCOU by the Member, his or her account can at any time be suspended as a safeguard measure and then terminated as of right by HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1">HAPPN will be entitled to suspend a Member’s account as long as necessary to allow the customer service team to make all investigations necessary following the report as required by Article 8.3 or in case of presumed breach of TCOU.</span></p>
+
+
+<p class="p1"><span class="s1">The reporting Member will be informed of such a decision on the Application and/or by email at the address given. The Member is invited to contact the customer service staff in order to get more information on the reasons of the suspension and in order to give some explanations and/or bring the proof that the breach has been cured.</span></p>
+
+
+<p class="p1"><span class="s1">If within 30 days following the notification of the account suspension, the Member has not contacted the customer service staff or if the elements given by the Members did not help to remedy the breach, HAPPN will be entitled to notify the Member of his account removal via the Application and/or by email to the address given. Unless stated otherwise, the duration of such removal is set at 3 years from the notification.</span></p>
+
+
+<p class="p1"><span class="s1">Upon Termination of the Account:</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The Member’s profile will be invisible to other Members;</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The Member's data shall be retained for one year as of this date, as regards in particular the legal obligations incumbent upon HAPPN in accordance with the terms set out by Article 6.6 hereof, and shall be permanently deleted thereafter;</span></p>
+
+<p class="p1"><span class="s1">• The remaining Credits shall be permanently deleted from the Account without any possibility to claim any reimbursement.</span></p>
+
+
+<p class="p1"><span class="s1">The Member will not be able to create another account for a 3-year period from the notification of the Account removal and the Member will be registered on an exclusion list.</span></p>
+
+
+<p class="p1"><span class="s1"><b>16.5 Termination of inactive Accounts by HAPPN</b></span></p>
+
+<p class="p1"><span class="s1">As of January 1, 2017, at the latest, HAPPN will suspend inactive accounts as defined below:</span></p>
+
+<p class="p1"><span class="s1">An account is considered inactive if after a continuous period of one year:</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The Application of the Member did not establish contact with HAPPN’s servers (including because of deactivation of the geolocation process); and</span></p>
+
+<p class="p1"><span class="s1">• The Member has not used the Application</span></p>
+
+<p class="p1"><span class="s1">Note that both conditions must be met.</span></p>
+
+
+<p class="p1"><span class="s1">The Member will be informed by email (at the address given in the Application) of the suspension of his/her account subject to prior notice of eight (8) days.</span></p>
+
+<p class="p1"><span class="s1">During the period of notice, the Member is able to reactivate his/her Account, which result in the suspension of the termination procedure. The entire content of the Member’s profile will then be preserved.</span></p>
+
+
+<p class="p1"><span class="s1">At the end of the period of notice and in the absence of a contrary intention expressed by the Member, the Account will be automatically deleted by HAPPN.</span></p>
+
+
+<p class="p1"><span class="s1">Upon Termination of the Account:</span></p>
+
+
+<p class="p1"><span class="s3">• </span><span class="s1">The Member’s profile will be invisible to other Members;</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The Member's data shall be retained for one year as of this date, as regards in particular the legal obligations incumbent upon HAPPN in accordance with the terms set out by Article 6.6 hereof, and shall be permanently deleted thereafter;</span></p>
+
+<p class="p1"><span class="s3">• </span><span class="s1">The remaining Credits shall be permanently deleted from the Account without any possibility to claim any reimbursement.</span></p>
+
+
+<p class="p1"><span class="s1">The Member will not be able to reactivate his/her previous Account.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 17: Contact Details</h2>
+
+<p class="p1"><span class="s1">Members can contact HAPPN by mail at 8 Rue du Sentier, 75002, Paris, or by e-mail at the following address: <a href="mailto:support@happn.com"><span class="s4">support@happn.com</span></a>.</span></p>
+
+
+</div>
+<div class="point"><h2>Article 18: Confidentiality Clause</h2>
+
+<p class="p1"><span class="s1">In the event of a dispute, neither HAPPN nor the Member are authorized to disclose information about the agreement between them, and each party agrees to comply with a confidentiality clause which requires them to prefer confidential negotiations in the event of a disagreement.</span></p>
+</div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+        </div>
+        <div id="cookie-popin-wrapper" class="cookie-popin-wrapper">
+            <div class="cookie-popin">
+                <div class="cookie-left">
+                    By continuing to browse this site, you agree to our use of cookies to make your visit easier, to enable us to measure the audience of our websites and to offer you personnalised content.                    <a href="/en/cookies" class="cookie-popin-link">
+                        To know more and set the use of these cookies.                    </a>
+                </div>
+                <div class="cookie-right">
+                    <button id="cookie-button" class="cookie-button">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer desktop-view">
+            <ul>
+                <li>
+                    <a href="/en/#intro">Download</a>
+                </li>
+                <li>
+                    <a href="/en/#app-concept">Tutorial</a>
+                </li>
+                <li>
+                    <a href="/en/about">About us</a>
+                </li>
+                <li>
+                    <a href="/en/faq">FAQ</a>
+                </li>
+                <li>
+                    <a href="/en/press">Press</a>
+                </li>
+                <li>
+                    <a href="/en/privacy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="/en/terms">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="/en/legal">Legal</a>
+                </li>
+                <li>
+                    <a href="/en/job">Jobs</a>
+                </li>
+                <li>
+                    <a href="/en/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/en/cookies">Cookies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer mobile-view">
+            <ul>
+                <li>
+                    <a href="/en/privacy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="/en/terms">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="/en/legal">Legal</a>
+                </li>
+                <li>
+                    <a href="/en/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="wh-root"></div>
+    </div>
+    <div id="dialog" class="popin-app-choice" title="Basic dialog">
+        <a href="#" class="close"></a>
+        <h1>Find the people you’ve crossed paths with, thanks to happn !</h1>
+        <p>happn is available for free on iPhone and Android.</p>
+        <ul>
+            <li><a class="bt-appstore"
+                   href="https://app.adjust.com/q9bvl0?campaign=Desktop"><img
+                        class="icon-os" src="/images/icon-logo-apple.png"><img
+                        src="/images/bt-dl-appstore.png"></a></li>
+            <li><a class="bt-googleplay"
+                   href="https://app.adjust.com/ysas9p?campaign=Desktop"><img
+                        class="icon-os" src="/images/icon-logo-android.png"><img
+                        src="/images/bt-dl-googleplay.png"></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"
+          href="/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"
+          href="/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"
+          href="/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="Happn"/>
+    <meta name="msapplication-TileColor" content="#0D8DB8"/>
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png"/>
+
+    <meta name="viewport" content="width=480, initial-scale=0.6 user-scalable='no'">
+
+    
+        <link href="/css/new.css?v=2" media="screen" rel="stylesheet" type="text/css" >
+<link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="/css/faq.css" media="screen" rel="stylesheet" type="text/css" >        <title>happn</title>                        
+    <script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/sdk.js?v=2"></script>
+<script type="text/javascript" src="/js/happn.js?v=2"></script>
+<script type="text/javascript" src="/js/cookie.js?v=2"></script>
+<script type="text/javascript" src="/js/faq.js"></script>    <script type="application/javascript">
+        $(document).ready(function () {
+            WH.init({
+                domain: ".happn.fr",
+                appId: "7f9592eb2b14da37e8bc7c7a6c1490f4",
+                status: true,
+                cookie: true
+            });
+        });
+    </script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	 (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9959023750977957",
+			   enable_page_level_ads: true
+			    });
+	</script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MSVSNM"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MSVSNM');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+    var port = location.port;
+    if (port.length > 0) {
+        port = ':' + port;
+    }
+    var loginUrl = location.protocol + '//' + location.hostname + port + "/en/login";
+    var synchronizeUrl = location.protocol + '//' + location.hostname + port + "/front/account/synchronize";
+    var shareHref = location.protocol + '//' + location.hostname + port + "/en/new-year";
+
+    $(document).ready(function () {
+        Website.init({
+            'appId': 247294518656661,
+            'loginUrl': loginUrl,
+            'synchronizeUrl': synchronizeUrl,
+            'fbLoginUrl': '',
+            'nyShareHref': shareHref,
+            'nyShareText': 'In 2015, make it happn ! May this year be full of surprises, chances and opportunities.',
+            'youtubeUrl': 'ZH6ZnofSJS0'
+        });
+            });
+</script>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+    if (location.hash == "#app-concept") {
+        dataLayer.push({
+            'event': 'VirtualPageview',
+            'virtualPageURL': location.pathname + location.search + location.hash,
+            'virtualPageTitle': 'tutorial'
+        });
+    } else {
+        dataLayer.push({
+            'event': 'VirtualPageview',
+            'virtualPageURL': location.pathname + location.search + location.hash,
+            'virtualPageTitle': "faq"
+        });
+    }
+</script>
+<div class="loader">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<div style="overflow: hidden">
+    <nav>
+        <ul>
+            <li>
+                <ul>
+                    <li><a class="text-menu"
+                           href="/en/#intro">Download</a>
+                    </li>
+                    <li><a class="text-menu mobile"
+                           href="/en/#app-concept">Tutorial</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/about">About us</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/faq">FAQ</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/privacy">Privacy Policy</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/trust">Confidence Charter</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/terms">Terms of Service</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/job">Jobs</a>
+                    </li>
+                    <li><a class="text-menu"
+                           href="/en/contact">Contact</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <form>
+                    <label for="select-language">language</label>
+                    <select id="select-language">
+                        <option
+                            value="fr" >French</option>
+                        <option
+                            value="en"  selected >English</option>
+                        <option
+                            value="de" >Deutsch</option>
+                        <option
+                            value="es" >Spanish</option>
+                        <option
+                            value="ja" >Japanese</option>
+                    </select>
+                </form>
+            </li>
+            <li>
+                <ul class="menu-nav-download">
+                    <li><a class="button-appstore"
+                           href="https://app.adjust.com/q9bvl0?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.appstore.click'});" target="_blank"></a></li>
+                    <li><a class="button-googleplay"
+                           href="https://app.adjust.com/ysas9p?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.android.click'});" target="_blank"></a></li>
+                    <li><a class="button-wpstore"
+                           href="https://app.adjust.com/iaejry?campaign=Desktop"
+                           onclick="dataLayer.push({event: 'desktop.link.windows.click'});" target="_blank"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="top-bar">
+            <a href="/en/#intro" class="logo-btn">
+                <img height="36px" src="/images/logo-happn-mini-laptop.svg"
+                     class="desktop-view"/>
+                <img height="44px" src="/images/logo-happn-mini-laptop.svg"
+                     class="mobile-view"/>
+            </a>
+                                                    <div class="account-box" style="display: none">
+                        <a href="/en/account">
+                            <img src=""/>
+                            <span class="name"></span>
+                        </a>
+                        <a href="/auth/logout" class="logout">Se&nbsp;déconnecter</a>
+                    </div>
+
+                                <a class="menu-btn desktop-view" href="#"><img height="24px" src="/images/icon-menu.svg"></a>
+            <a class="menu-btn mobile-view" href="#"><img height="28px" src="/images/icon-menu.svg"></a>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div id="content">
+            <div class="head-content-faq"
+     style="text-align: center;background-image:url('/images/bg-faq-search.png');background-position: top;background-size:cover;">
+    <div id="faq-language-selector" class="faq-language-selector">
+        <div id="faq-current-language-wrapper" class="faq-current-language-wrapper">
+            <div id="faq-current-language" class="faq-current-language">
+            </div>
+            <img src="/images/icon-arrow-bottom.svg" alt="">
+        </div>
+        <ul id="faq-available-languages" class="faq-available-languages">
+
+        </ul>
+    </div>
+    <div class="table" style="width: 100%;height: inherit;">
+        <div class="table-cell resizable-container" style="height: inherit;vertical-align: middle;">
+            <h1 class="title-big-white">Help Center</h1>
+            <div class="faq-searchbar-help">
+                <input id="search-input" type="text"
+                       placeholder="Search what you'd like">
+                <button id="search-button"></button>
+                <p>E.g. ' Registration ' , ' Charm ' , ' Crush '</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="help-center">
+        <div class="popular-subjects">
+            <h1 class="help-center-title">Popular Topics</h1>
+            <div id="faq-categories" class="categories">
+            </div>
+        </div>
+        <div class="top-articles-wrapper">
+            <div class="content">
+                <div class="other-categories">
+                    <h1 class="help-center-title">Other Topics</h1>
+                    <ul>
+
+                    </ul>
+                </div>
+                <div id="promoted-articles" class="top-articles">
+                    <h1 class="help-center-title">Most Popular Articles</h1>
+                    <ul class="articles-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="faq-contact" id="faq-contact">
+            <h1 class="help-center-title">
+                Contact Us            </h1>
+            <form class="faq-contact-form hidden" id="faq-contact-form" action="">
+                <div id="message" class="message hidden">
+                    <img src="/images/faq-icon-check.png" alt="">
+                    <p class="connected-text">Please enter the details of your request. Someone from our support team will get in touch with you as soon as possible.</p>
+                    <p class="send-text">Thank you for contacting us. We will do our best to reply as soon as possible.</p>
+                </div>
+                <input id="input-email" class="faq-form-element" type="text"
+                       placeholder="Enter your email adress">
+                <div id="select-reason" class="select-wrapper">
+                    <img src="/images/bt-select-arrow.png" alt="" class="arrow">
+                    <select class="faq-form-element" name="" id="">
+                        <option value="">Choose a Topic</option>
+                        <option value="account">Manage my Account</option><option value="connection">Login Problem</option><option value="registration">Registration Problem</option><option value="technical">Report a technical issue</option><option value="credits">Question about Credits</option><option value="suggestion">Rate this App</option><option value="administrative">Administrative Request</option><option value="other">Other</option>                    </select>
+                </div>
+                <textarea id="textarea-contact" class="faq-form-element"
+                          placeholder="Please write your message here…"></textarea>
+                <button id="btn-contact" class="btn-contact" disabled>
+                    Send                </button>
+            </form>
+            <div id="fb-connect" class="fb-connect">
+                <p>For questions about the App and to ensure that your request is handled promptly and accurately, please log in through Facebook to contact our Customer Service.</p>
+                <button id="btn-fb" class="btn-fb">Connect with Facebook</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            FAQ.init(247294518656661,
+                "9e0c3dfde6821a885aaf0d3d25d6dd08f3620035fad87ade98e999594849b783", function () {
+
+                    this.path = {
+                        locale: "en",
+                        faq: "faq",
+                        articles: "articles",
+                        categories: "categories",
+                        search: "page_search"
+                    };
+
+                    this.setLocale(this.path.locale);
+                    this.contactSubject = "happn - Support Request";
+
+                    this.getCategories();
+                    this.getPromotedArticles();
+                });
+        });
+    </script>
+</div>
+        </div>
+        <div id="cookie-popin-wrapper" class="cookie-popin-wrapper">
+            <div class="cookie-popin">
+                <div class="cookie-left">
+                    By continuing to browse this site, you agree to our use of cookies to make your visit easier, to enable us to measure the audience of our websites and to offer you personnalised content.                    <a href="/en/cookies" class="cookie-popin-link">
+                        To know more and set the use of these cookies.                    </a>
+                </div>
+                <div class="cookie-right">
+                    <button id="cookie-button" class="cookie-button">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer desktop-view">
+            <ul>
+                <li>
+                    <a href="/en/#intro">Download</a>
+                </li>
+                <li>
+                    <a href="/en/#app-concept">Tutorial</a>
+                </li>
+                <li>
+                    <a href="/en/about">About us</a>
+                </li>
+                <li>
+                    <a href="/en/faq">FAQ</a>
+                </li>
+                <li>
+                    <a href="/en/press">Press</a>
+                </li>
+                <li>
+                    <a href="/en/privacy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="/en/terms">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="/en/legal">Legal</a>
+                </li>
+                <li>
+                    <a href="/en/job">Jobs</a>
+                </li>
+                <li>
+                    <a href="/en/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/en/cookies">Cookies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer mobile-view">
+            <ul>
+                <li>
+                    <a href="/en/privacy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="/en/terms">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="/en/legal">Legal</a>
+                </li>
+                <li>
+                    <a href="/en/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="wh-root"></div>
+    </div>
+    <div id="dialog" class="popin-app-choice" title="Basic dialog">
+        <a href="#" class="close"></a>
+        <h1>Find the people you’ve crossed paths with, thanks to happn !</h1>
+        <p>happn is available for free on iPhone and Android.</p>
+        <ul>
+            <li><a class="bt-appstore"
+                   href="https://app.adjust.com/q9bvl0?campaign=Desktop"><img
+                        class="icon-os" src="/images/icon-logo-apple.png"><img
+                        src="/images/bt-dl-appstore.png"></a></li>
+            <li><a class="bt-googleplay"
+                   href="https://app.adjust.com/ysas9p?campaign=Desktop"><img
+                        class="icon-os" src="/images/icon-logo-android.png"><img
+                        src="/images/bt-dl-googleplay.png"></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
