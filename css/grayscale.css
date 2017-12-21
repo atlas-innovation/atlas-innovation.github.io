@@ -1,3 +1,8 @@
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
 body {
 	font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: relative;
