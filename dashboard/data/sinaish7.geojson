@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 2, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 12:25:52", "PRECISION": "77.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3979252, 41.5580278  ] } }  
+,
+{ "type": "Feature", "id": 1, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 17:38:52", "PRECISION": "82.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3983606, 41.5580039 ] } }  
+
+]
+}
