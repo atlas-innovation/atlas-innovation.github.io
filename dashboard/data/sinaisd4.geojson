@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 2, "properties": { "TITLE": "D4 - Rotunda", "TIMESTAMP": "2017-11-25 12:25:52", "PRECISION": "77.0%", "NOTA": "", "IMAGE": "http://www.portalangop.co.ao/motix/pt_pt/files/highlight/2008/11/49/0,277d08ca-b657-4d17-8ce3-9d4abc12ca40.jpg" }, "geometry": { "type": "Point", "coordinates": [ -8.3979292, 41.5582278  ] } }  
+,
+{ "type": "Feature", "id": 1, "properties": { "TITLE": "D4 - Rotunda", "TIMESTAMP": "2017-11-25 17:38:52", "PRECISION": "82.0%", "NOTA": "", "IMAGE": "https://2.bp.blogspot.com/-nKP_31Lty8E/WOQoeTfwiBI/AAAAAAABYEo/6pHDhUsuecM_TyanYwmBBUXAPkhu-Z5AgCLcB/s1600/Rotunda%2BBuarcos2.JPG" }, "geometry": { "type": "Point", "coordinates": [ -8.3983696, 41.5582039 ] } }  
+
+]
+}

@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 2, "properties": { "TITLE": "B2 - Paragem obrigatória no cruzamento ou entroncamento", "TIMESTAMP": "2017-05-11 09:25:52", "PRECISION": "77.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3989252, 41.5580978  ] } }  
+,
+{ "type": "Feature", "id": 1, "properties": { "TITLE": "B2 - Paragem obrigatória no cruzamento ou entroncamento", "TIMESTAMP": "2018-01-01 17:38:52", "PRECISION": "82.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3983506, 41.5580339 ] } }  
+
+]
+}
