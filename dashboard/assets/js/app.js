@@ -250,7 +250,7 @@ var h7s = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
+      var content = "<img src='" + feature.properties.IMAGE + "'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.TITLE);
@@ -292,7 +292,7 @@ var b2s = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
+      var content = "<img src='" + feature.properties.IMAGE + "'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.TITLE);
@@ -334,7 +334,7 @@ var d4s = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
+      var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.TITLE);
@@ -481,7 +481,7 @@ var groupedOverlays = {
   "Points of Interest": {    
     "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true' width='24' height='28'>&nbsp;H7": h7Layer,
     "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/B2.png?raw=true' width='24' height='28'>&nbsp;B2": b2Layer,
-    "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true' width='24' height='28'>&nbsp;H7": d4Layer
+    "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true' width='24' height='28'>&nbsp;D4": d4Layer
   }
 };
 

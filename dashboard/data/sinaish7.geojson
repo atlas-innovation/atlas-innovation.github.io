@@ -2,9 +2,9 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "id": 2, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 12:25:52", "PRECISION": "77.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3979252, 41.5580278  ] } }  
+{ "type": "Feature", "id": 2, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 12:25:52", "PRECISION": "77.0%", "NOTA": "", "IMAGE": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWSGbFVShkvyqjbv5M-XQO0P_2_H7H-WBMpdU0I-U0r6wsZOtJg" }, "geometry": { "type": "Point", "coordinates": [ -8.3979252, 41.5580278  ] } }  
 ,
-{ "type": "Feature", "id": 1, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 17:38:52", "PRECISION": "82.0%", "NOTA": null }, "geometry": { "type": "Point", "coordinates": [ -8.3983606, 41.5580039 ] } }  
+{ "type": "Feature", "id": 1, "properties": { "TITLE": "H7 - Passagem para peoes", "TIMESTAMP": "2017-11-25 17:38:52", "PRECISION": "82.0%", "NOTA": "", "IMAGE": "http://3.bp.blogspot.com/-haezjaaPrl8/VpGRt7UAF1I/AAAAAAAAAvY/_dLkd4Qv5_8/w1200-h630-p-k-no-nu/P1070364.JPG" }, "geometry": { "type": "Point", "coordinates": [ -8.3983606, 41.5580039 ] } }  
 
 ]
 }
