@@ -1,4 +1,5 @@
-var map, featureList, boroughSearch = [], h7Search = [],  b2Search = [], d4Search = [];
+var map, featureList;
+var featuresInfo = {}; 
 
 $(window).resize(function() {
   sizeLayerControl();
@@ -23,23 +24,23 @@ $("#about-btn").click(function() {
   return false;
 });
 
-$("#full-extent-btn").click(function() {
-  map.fitBounds(boroughs.getBounds());
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#full-extent-btn").click(function() {
+//   //map.fitBounds(boroughs.getBounds()); TODO
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
-$("#legend-btn").click(function() {
-  $("#legendModal").modal("show");
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#legend-btn").click(function() {
+//   $("#legendModal").modal("show");
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
-$("#login-btn").click(function() {
-  $("#loginModal").modal("show");
-  $(".navbar-collapse.in").collapse("hide");
-  return false;
-});
+// $("#login-btn").click(function() {
+//   $("#loginModal").modal("show");
+//   $(".navbar-collapse.in").collapse("hide");
+//   return false;
+// });
 
 $("#list-btn").click(function() {
   animateSidebar();
@@ -88,36 +89,79 @@ function sidebarClick(id) {
   }
 }
 
+$.ajaxSetup({ async: false })
+
+$.getJSON("data/featuresinfo.json", function (data) { 
+  $.each(data, function(i, element) {     
+    featuresInfo[element.type] = {      
+      'type': element.type,
+      'icon': element.icon,
+      'search': [],
+      'layer': L.geoJson(null),
+      'markers': L.geoJson(null, {
+        pointToLayer: function (feature, latlng) {
+          return L.marker(latlng, {
+            icon: L.icon({
+              iconUrl: element.icon,
+              iconSize: [32, ],
+              iconAnchor: [12, 28],
+              popupAnchor: [0, -25]
+            }),
+            title: feature.properties.TITLE,
+            riseOnHover: true
+          });
+        },
+        onEachFeature: function (feature, layer) {
+          $.ajaxSetup({ async: true })
+            if (feature.properties) {
+              var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
+              layer.on({
+                  click: function (e) {
+                      $("#feature-title").html(feature.properties.TITLE);
+                      $("#feature-info").html(content);
+                      $("#featureModal").modal("show");
+                      highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
+                  }
+              });
+              $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="' + element.icon + '"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');                
+              featuresInfo[element.type]["search"].push({
+                  name: layer.feature.properties.TITLE,
+                  address: layer.feature.geometry.coordinates[1] + layer.feature.geometry.coordinates[0],
+                  source: element.type,
+                  id: L.stamp(layer),
+                  lat: layer.feature.geometry.coordinates[1],
+                  lng: layer.feature.geometry.coordinates[0]
+              });
+          }
+        }        
+      }),      
+      'bh': {}
+    };
+    $.getJSON("data/" + element.type + ".geojson", function (data) {
+      // console.log("DATA MARKERS " + element.type + ": " + JSON.stringify(data));                    
+      featuresInfo[element.type]["markers"].addData(data);                  
+    });    
+  });
+  
+});
+
+
 function syncSidebar() {
   /* Empty sidebar features */
   $("#feature-list tbody").empty();  
-  
-  /* Loop through h7 layer and add only features which are in the map bounds */
-  h7s.eachLayer(function (layer) {
-    if (map.hasLayer(h7Layer)) {
-      if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      }
-    }
-  });
 
-  /* Loop through B2 layer and add only features which are in the map bounds */
-  b2s.eachLayer(function (layer) {
-    if (map.hasLayer(b2Layer)) {
-      if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/B2.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      }
-    }
-  });
+  // console.log("sysncSidebar");  
 
-  /* Loop through B2 layer and add only features which are in the map bounds */
-  d4s.eachLayer(function (layer) {
-    if (map.hasLayer(d4Layer)) {
-      if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      }
-    }
-  });
+  /* Loop through signals layer and add only features which are in the map bounds */
+  $.each(featuresInfo, function(i, element) {    
+    element['markers'].eachLayer(function (layer_x) {        
+        if (map.hasLayer(element.layer)) {
+            if (map.getBounds().contains(layer_x.getLatLng())) {
+                  $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer_x) + '" lat="' + layer_x.getLatLng().lat + '" lng="' + layer_x.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="' + element.icon + '"></td><td class="feature-name">' + layer_x.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+            }
+        }
+    });
+});
 
   /* Update list.js featureList */
   featureList = new List("features", {
@@ -153,77 +197,6 @@ var highlightStyle = {
   radius: 10
 };
 
-var boroughs = L.geoJson(null, {
-  style: function (feature) {
-    return {
-      color: "black",
-      fill: false,
-      opacity: 1,
-      clickable: false
-    };
-  },
-  onEachFeature: function (feature, layer) {
-    boroughSearch.push({
-      name: layer.feature.properties.BoroName,
-      source: "Boroughs",
-      id: L.stamp(layer),
-      bounds: layer.getBounds()
-    });
-  }
-});
-$.getJSON("data/boroughs.geojson", function (data) {
-  boroughs.addData(data);
-});
-
-//Create a color dictionary based off of subway route_id
-var subwayColors = {"1":"#ff3135", "2":"#ff3135", "3":"ff3135", "4":"#009b2e",
-    "5":"#009b2e", "6":"#009b2e", "7":"#ce06cb", "A":"#fd9a00", "C":"#fd9a00",
-    "E":"#fd9a00", "SI":"#fd9a00","H":"#fd9a00", "Air":"#ffff00", "B":"#ffff00",
-    "D":"#ffff00", "F":"#ffff00", "M":"#ffff00", "G":"#9ace00", "FS":"#6e6e6e",
-    "GS":"#6e6e6e", "J":"#976900", "Z":"#976900", "L":"#969696", "N":"#ffff00",
-    "Q":"#ffff00", "R":"#ffff00" };
-
-var subwayLines = L.geoJson(null, {
-  style: function (feature) {
-      return {
-        color: subwayColors[feature.properties.route_id],
-        weight: 3,
-        opacity: 1
-      };
-  },
-  onEachFeature: function (feature, layer) {
-    if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Division</th><td>" + feature.properties.Division + "</td></tr>" + "<tr><th>Line</th><td>" + feature.properties.Line + "</td></tr>" + "<table>";
-      layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.Line);
-          $("#feature-info").html(content);
-          $("#featureModal").modal("show");
-
-        }
-      });
-    }
-    layer.on({
-      mouseover: function (e) {
-        var layer = e.target;
-        layer.setStyle({
-          weight: 3,
-          color: "#00FFFF",
-          opacity: 1
-        });
-        if (!L.Browser.ie && !L.Browser.opera) {
-          layer.bringToFront();
-        }
-      },
-      mouseout: function (e) {
-        subwayLines.resetStyle(e.target);
-      }
-    });
-  }
-});
-$.getJSON("data/subways.geojson", function (data) {
-  subwayLines.addData(data);
-});
 
 /* Single marker cluster layer to hold all clusters */
 var markerClusters = new L.MarkerClusterGroup({
@@ -233,169 +206,33 @@ var markerClusters = new L.MarkerClusterGroup({
   disableClusteringAtZoom: 16
 });
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove h7s to markerClusters layer */
-var h7Layer = L.geoJson(null);
-var h7s = L.geoJson(null, {
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {
-      icon: L.icon({
-        iconUrl: "https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true",
-        iconSize: [24, 28],
-        iconAnchor: [12, 28],
-        popupAnchor: [0, -25]
-      }),
-      title: feature.properties.TITLE,
-      riseOnHover: true
-    });
-  },
-  onEachFeature: function (feature, layer) {
-    if (feature.properties) {
-      var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
-      layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.TITLE);
-          $("#feature-info").html(content);
-          $("#featureModal").modal("show");
-          highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
-        }
-      });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      h7Search.push({
-        name: layer.feature.properties.TITLE,
-        address: layer.feature.geometry.coordinates[1] + layer.feature.geometry.coordinates[0],
-        source: "H7",
-        id: L.stamp(layer),
-        lat: layer.feature.geometry.coordinates[1],
-        lng: layer.feature.geometry.coordinates[0]
-      });
-    }
-  }
-});
-$.getJSON("data/sinaish7.geojson", function (data) {
-  h7s.addData(data);
-});
-
-/* Empty layer placeholder to add to layer control for listening when to add/remove b2s to markerClusters layer */
-var b2Layer = L.geoJson(null);
-var b2s = L.geoJson(null, {
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {
-      icon: L.icon({
-        iconUrl: "https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/B2.png?raw=true",
-        iconSize: [24, 28],
-        iconAnchor: [12, 28],
-        popupAnchor: [0, -25]
-      }),
-      title: feature.properties.TITLE,
-      riseOnHover: true
-    });
-  },
-  onEachFeature: function (feature, layer) {
-    if (feature.properties) {
-      var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
-      layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.TITLE);
-          $("#feature-info").html(content);
-          $("#featureModal").modal("show");
-          highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
-        }
-      });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      b2Search.push({
-        name: layer.feature.properties.TITLE,
-        address: layer.feature.geometry.coordinates[1] + layer.feature.geometry.coordinates[0],
-        source: "B2",
-        id: L.stamp(layer),
-        lat: layer.feature.geometry.coordinates[1],
-        lng: layer.feature.geometry.coordinates[0]
-      });
-    }
-  }
-});
-$.getJSON("data/sinaisb2.geojson", function (data) {
-  b2s.addData(data);
-});
-
-/* Empty layer placeholder to add to layer control for listening when to add/remove d4s to markerClusters layer */
-var d4Layer = L.geoJson(null);
-var d4s = L.geoJson(null, {
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {
-      icon: L.icon({
-        iconUrl: "https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true",
-        iconSize: [24, 28],
-        iconAnchor: [12, 28],
-        popupAnchor: [0, -25]
-      }),
-      title: feature.properties.TITLE,
-      riseOnHover: true
-    });
-  },
-  onEachFeature: function (feature, layer) {
-    if (feature.properties) {
-      var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
-      layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.TITLE);
-          $("#feature-info").html(content);
-          $("#featureModal").modal("show");
-          highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
-        }
-      });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true"></td><td class="feature-name">' + layer.feature.properties.TITLE + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
-      d4Search.push({
-        name: layer.feature.properties.TITLE,
-        address: layer.feature.geometry.coordinates[1] + layer.feature.geometry.coordinates[0],
-        source: "D4",
-        id: L.stamp(layer),
-        lat: layer.feature.geometry.coordinates[1],
-        lng: layer.feature.geometry.coordinates[0]
-      });
-    }
-  }
-});
-$.getJSON("data/sinaisd4.geojson", function (data) {
-  d4s.addData(data);
-});
-
 map = L.map("map", {
   zoom: 10,
   center: [-8.3987357, 41.5585288],
-  layers: [cartoLight, boroughs, markerClusters, highlight],
+  layers: [cartoLight, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
 
 /* Layer control listeners that allow for a single markerClusters layer */
 map.on("overlayadd", function(e) {
-  if (e.layer === h7Layer) {
-    markerClusters.addLayer(h7s);
-    syncSidebar();
-  }
-  if (e.layer === b2Layer) {
-    markerClusters.addLayer(b2s);
-    syncSidebar();
-  }
-  if (e.layer === d4Layer) {
-    markerClusters.addLayer(d4s);
-    syncSidebar();
-  }
+  $.each(featuresInfo, function(i, element) {
+    if (e.layer === element.layer) {  
+        console.log("aaaaaaa");
+        markerClusters.addLayer(element.markers);
+        syncSidebar();
+    }
+  });
 });
 
 map.on("overlayremove", function(e) {
-  if (e.layer === h7Layer) {
-    markerClusters.removeLayer(h7s);
-    syncSidebar();
-  }
-  if (e.layer === b2Layer) {
-    markerClusters.removeLayer(b2s);
-    syncSidebar();
-  }
-  if (e.layer === d4Layer) {
-    markerClusters.removeLayer(d4s);
-    syncSidebar();
-  }
+  $.each(featuresInfo, function(i, element) {
+    if (e.layer === element.layer) {  
+        console.log("oooooooo");
+        markerClusters.removeLayer(element.markers);
+        syncSidebar();
+    }
+  });
 });
 
 /* Filter sidebar feature list to only show features in current map bounds */
@@ -424,7 +261,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://bryanmcbride.com'>bryanmcbride.com</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://atlas-innovation.pt'>atlas-innovation.pt</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
   return div;
 };
 map.addControl(attributionControl);
@@ -478,12 +315,12 @@ var baseLayers = {
 };
 
 var groupedOverlays = {
-  "Points of Interest": {    
-    "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true' width='24' height='28'>&nbsp;H7": h7Layer,
-    "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/B2.png?raw=true' width='24' height='28'>&nbsp;B2": b2Layer,
-    "<img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true' width='24' height='28'>&nbsp;D4": d4Layer
-  }
+  "Points of Interest": {}
 };
+
+$.each(featuresInfo, function(i, element) {
+  groupedOverlays["Points of Interest"]["<img src='" + element.icon + "' width='24' height='28'>&nbsp;" + element.type] = featuresInfo[element.type]["layer"];
+});
 
 var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
   collapsed: isCollapsed
@@ -492,6 +329,7 @@ var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
 /* Highlight search box text on click */
 $("#searchbox").click(function () {
   $(this).select();
+  console.log("search on top!!");
 });
 
 /* Prevent hitting enter from refreshing the page */
@@ -508,51 +346,25 @@ $("#featureModal").on("hidden.bs.modal", function (e) {
 /* Typeahead search functionality */
 $(document).one("ajaxStop", function () {
   $("#loading").hide();
+  // console.log("loading");
   sizeLayerControl();
-  /* Fit map to boroughs bounds */
-  map.fitBounds(h7s.getBounds());
+  
+  var bounds = new L.LatLngBounds(new L.LatLng(41.5585288, -8.3987357), new L.LatLng(41.5585288, -8.3987357));
+    map.fitBounds(featuresInfo[Object.keys(featuresInfo)[0]].markers.getBounds());
+    //map.fitBounds(bounds);
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
-  var boroughsBH = new Bloodhound({
-    name: "Boroughs",
-    datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
-    },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: boroughSearch,
-    limit: 10
-  });
-
-  
-  var h7BH = new Bloodhound({
-    name: "H7",
-    datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
-    },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: h7Search,
-    limit: 10
-  });
-
-  var b2BH = new Bloodhound({
-    name: "B2",
-    datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
-    },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: b2Search,
-    limit: 10
-  });
-
-  var d4BH = new Bloodhound({
-    name: "D4",
-    datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
-    },
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: d4Search,
-    limit: 10
+  $.each(featuresInfo, function(i, element) {
+    element.bh = new Bloodhound({
+        name: element.type,
+        datumTokenizer: function (d) {
+            return Bloodhound.tokenizers.whitespace(d.name);
+        },
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: element.search,
+        limit: 10
+    });                
   });
 
   var geonamesBH = new Bloodhound({
@@ -585,10 +397,9 @@ $(document).one("ajaxStop", function () {
     },
     limit: 10
   });
-  boroughsBH.initialize();
-  h7BH.initialize();
-  b2BH.initialize();
-  d4BH.initialize();
+  $.each(featuresInfo, function(i, element) {    
+    element['bh'].initialize();        
+  }); 
   geonamesBH.initialize();
 
   /* instantiate the typeahead UI */
@@ -596,77 +407,36 @@ $(document).one("ajaxStop", function () {
     minLength: 3,
     highlight: true,
     hint: false
-  }, {
-    name: "Boroughs",
-    displayKey: "name",
-    source: boroughsBH.ttAdapter(),
-    templates: {
-      header: "<h4 class='typeahead-header'>Boroughs</h4>"
-    }
-  }, {
-    name: "H7",
-    displayKey: "name",
-    source: h7BH.ttAdapter(),
-    templates: {
-      header: "<h4 class='typeahead-header'><img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/H7.png?raw=true' width='24' height='28'>&nbsp;H7</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
-    }
-  }, {
-    name: "B2",
-    displayKey: "name",
-    source: b2BH.ttAdapter(),
-    templates: {
-      header: "<h4 class='typeahead-header'><img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/B2.png?raw=true' width='24' height='28'>&nbsp;B2</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
-    }
-  }, {
-    name: "D4",
-    displayKey: "name",
-    source: d4BH.ttAdapter(),
-    templates: {
-      header: "<h4 class='typeahead-header'><img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true' width='24' height='28'>&nbsp;D4</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
-    }
-  }, {
+  }, {            // TODO
+  //   name: "D4",
+  //   displayKey: "name",
+  //   source: featuresInfo['D4']['bh'].ttAdapter(),
+  //   templates: {
+  //     header: "<h4 class='typeahead-header'><img src='https://github.com/taniaesteves/UCE15/blob/master/Code/Model/Catalogs/sinais_de_transito/icons/D4.png?raw=true' width='24' height='28'>&nbsp;D4</h4>",
+  //     suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
+  //   }
+  // }, {
     name: "GeoNames",
     displayKey: "name",
     source: geonamesBH.ttAdapter(),
     templates: {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
-  }).on("typeahead:selected", function (obj, datum) {
-    if (datum.source === "Boroughs") {
-      map.fitBounds(datum.bounds);
-    }
-    if (datum.source === "H7") {
-      if (!map.hasLayer(h7Layer)) {
-        map.addLayer(h7Layer);
-      }
-      map.setView([datum.lat, datum.lng], 17);
-      if (map._layers[datum.id]) {
-        map._layers[datum.id].fire("click");
-      }
-    }        
-    if (datum.source === "B2") {
-      if (!map.hasLayer(b2Layer)) {
-        map.addLayer(b2Layer);
-      }
-      map.setView([datum.lat, datum.lng], 17);
-      if (map._layers[datum.id]) {
-        map._layers[datum.id].fire("click");
-      }
-    }   
-    if (datum.source === "D4") {
-      if (!map.hasLayer(d4Layer)) {
-        map.addLayer(d4Layer);
-      }
-      map.setView([datum.lat, datum.lng], 17);
-      if (map._layers[datum.id]) {
-        map._layers[datum.id].fire("click");
-      }
-    }   
+  }).on("typeahead:selected", function (obj, datum) {    
+    $.each(featuresInfo, function(i, element) {
+      if (datum.source === element.type) {
+          if (!map.hasLayer(element.layer)) {
+              map.addLayer(element.layer);
+              console.log("add layer");
+          }
+          map.setView([datum.lat, datum.lng], 17);
+          if (map._layers[datum.id]) {
+              map._layers[datum.id].fire("click");
+          }
+      }  
+    });                    
     if (datum.source === "GeoNames") {
-      map.setView([datum.lat, datum.lng], 14);
+      map.setView([datum.lat, datum.lng], 17);
     }
     if ($(".navbar-collapse").height() > 50) {
       $(".navbar-collapse").collapse("hide");
