@@ -337,6 +337,18 @@ a:focus, a:hover {
 	text-align: center;
 }
 
+.contactos-section {
+	background: url("../img/servico-bg.jpg") no-repeat center center scroll;
+	width: 100%;
+	height: 100%;
+	color: black;
+	background-color: black;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 #map {
 	width: 100%;
 	height: 300px;
