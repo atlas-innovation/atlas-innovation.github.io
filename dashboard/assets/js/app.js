@@ -90,7 +90,6 @@ function sidebarClick(id) {
 }
 
 $.ajaxSetup({ async: false })
-
 $.getJSON("data/featuresinfo.json", function (data) { 
   $.ajaxSetup({ async: true })
   $.each(data, function(i, element) {     
