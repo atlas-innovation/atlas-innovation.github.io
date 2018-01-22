@@ -115,10 +115,10 @@ $.getJSON("data/featuresinfo.json", function (data) {
         onEachFeature: function (feature, layer) {
           
             if (feature.properties) {
-              var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "</td></tr>" + "<tr><th>ADDRESS</th><td>" + feature.properties.ADDRESS + "</td></tr><table>";
+              var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + element.title + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "</td></tr>" + "<tr><th>ADDRESS</th><td>" + feature.properties.ADDRESS + "</td></tr><table>";
               layer.on({
                   click: function (e) {
-                      $("#feature-title").html(element.title);
+                      $("#feature-title").html(element.title + " [ " + feature.properties.ADDRESS + " ]");
                       $("#feature-info").html(content);
                       $("#featureModal").modal("show");
                       highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
