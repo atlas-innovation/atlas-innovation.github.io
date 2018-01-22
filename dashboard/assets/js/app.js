@@ -92,13 +92,14 @@ function sidebarClick(id) {
 $.ajaxSetup({ async: false })
 
 $.getJSON("data/featuresinfo.json", function (data) { 
+  $.ajaxSetup({ async: true })
   $.each(data, function(i, element) {     
     featuresInfo[element.type] = {      
       'type': element.type,
       'icon': element.icon,
       'search': [],
       'layer': L.geoJson(null),
-      'markers': L.geoJson(null, {
+      'markers': L.geoJson(null, {        
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, {
             icon: L.icon({
@@ -112,7 +113,7 @@ $.getJSON("data/featuresinfo.json", function (data) {
           });
         },
         onEachFeature: function (feature, layer) {
-          $.ajaxSetup({ async: true })
+          
             if (feature.properties) {
               var content = "<img src='" + feature.properties.IMAGE + "' width='100%'><table class='table table-striped table-bordered table-condensed'>" + "<tr><th>TITLE</th><td>" + feature.properties.TITLE + "</td></tr>" + "<tr><th>TIMESTAMP</th><td>" + feature.properties.TIMESTAMP + "</td></tr>" + "<tr><th>PRECISION</th><td>" + feature.properties.PRECISION + "</td></tr>" + "<tr><th>NOTE</th><td>" + feature.properties.NOTA + "</td></tr>" + "<table>";
               layer.on({
@@ -346,12 +347,12 @@ $("#featureModal").on("hidden.bs.modal", function (e) {
 /* Typeahead search functionality */
 $(document).one("ajaxStop", function () {
   $("#loading").hide();
-  // console.log("loading");
+  console.log("loading");
   sizeLayerControl();
   
   var bounds = new L.LatLngBounds(new L.LatLng(41.5585288, -8.3987357), new L.LatLng(41.5585288, -8.3987357));
-    map.fitBounds(featuresInfo[Object.keys(featuresInfo)[0]].markers.getBounds());
-    //map.fitBounds(bounds);
+    // map.fitBounds(featuresInfo[Object.keys(featuresInfo)[0]].markers.getBounds());
+    map.fitBounds(bounds);
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
